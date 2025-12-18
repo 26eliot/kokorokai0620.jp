@@ -1,0 +1,39 @@
+/* ===============================================
+# アニメーション
+=============================================== */
+// キーフレーム
+@keyframes open_menu {
+  0%  {opacity: 0;}
+  25% {opacity: 0;}
+  100%{opacity: 1;}
+}
+.key-open_menu {animation-name: open_menu;}
+
+
+// animationプロパティ
+.anime{
+  animation-duration: 3s; //アニメーション1回の時間
+  animation-fill-mode: forwards; // アニメーション再生後、キーフレーム100％のスタイル適用
+
+  // ループにする
+  &.loop {animation-iteration-count: infinite;}
+
+  // スタート時間の遅れ
+  &.delay-1s {animation-delay: 1s;} // 1秒後
+  &.delay-2s {animation-delay: 2s;} // 2秒後
+  &.delay-3s {animation-delay: 3s;} // 3秒後
+  &.delay-4s {animation-delay: 4s;} // 4秒後
+  &.delay-5s {animation-delay: 5s;} // 5秒後
+
+  // 速く
+  &.fast {animation-duration: 500ms;} // 0.5秒
+
+  // 遅く
+  &.slow-2s {animation-duration: 2s;} // 2秒
+  &.slow-10s{animation-duration: 10s;} // 10秒
+  &.slow-20s {animation-duration: 20s;} // 20秒
+
+  // 変化のタイミング
+  &.ease-in {animation-timing-function: ease-in;} // だんだん速く
+  &.ease-out {animation-timing-function: ease-out;} // だんだんゆっくり
+}

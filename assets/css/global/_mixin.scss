@@ -1,0 +1,40 @@
+/* ===============================================
+# ミックスイン
+=============================================== */
+// ブレイクポイント（PCファースト）
+
+@mixin pc($pc:1000px){
+  @media screen and (max-width:$pc) {
+    @content;
+  }
+}
+
+@mixin tb($tb:800px){
+  @media screen and (max-width:$tb) {
+    @content;
+  }
+}
+
+@mixin sp($sp:580px){
+  @media screen and (max-width:$sp) {
+    @content;
+  }
+}
+
+// positionで中央
+@mixin position-center{
+  position:absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+}
+
+//擬似要素のbackground-imageのオプション
+@mixin bg-option($size:cover){
+  display: inline-block;
+  content: "";
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:$size;
+  position: absolute;
+}

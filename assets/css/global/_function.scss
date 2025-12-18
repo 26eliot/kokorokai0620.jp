@@ -1,0 +1,21 @@
+/* ===============================================
+# 関数
+=============================================== */
+// rem()の引数にpxで自動でremに変換
+@function rem($px){
+  @return calc($px / 16) * 1rem;
+ }
+
+
+ // clamp（viewport範囲指定）
+ // ※引数(最小fontサイズ , 最大fontサイズ , 最小画面幅vw , 最大画面幅vw)
+ @function clamp-vw($min,$max,$min-view-port:375,$max-view-port:1200){
+  $valiable-part:calc(($max - $min) / ($max-view-port - $min-view-port));
+  $constant:calc(($max - $max-view-port * $valiable-part) / 16);
+  $min-rem:calc($min / 16 * 1rem);
+  $max-rem:calc($max / 16 * 1rem);
+  $variable-rem:calc($constant * 1rem);
+  $variable-vw:calc(100 * $variable-rem * 1vw);
+
+  @return clamp($min-rem,$variable-rem + $variable-vw,$max-rem);
+ }
