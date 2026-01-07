@@ -7,11 +7,11 @@ header {
     width: 100%;
     height: 72px;
     padding: 12px;
-    background-color: $bg-main;
-    position: fixed;
+    position: sticky;
     top: 0;
-    left: 0;
+    background-color: $bg-main;
     z-index: 99;
+    transition: all 0.3s ease; /* スクロール時滑らかにする */
 
     .header-container {
         width: 100%;
@@ -28,13 +28,12 @@ header {
         }
 
 
-
         /* ========ハンバーガーボタン======= */
 
         .hamburger-btn {
             width: 40px;
             height: auto;
-            margin-top: 8px;
+            margin-top: 12px;
             z-index: 999;
             cursor: pointer;
 
@@ -78,10 +77,14 @@ header {
         transform: translateX(100%);
         background-color: $bg-main;
         transition: ease .4s;
+        z-index: 9999;
+        opacity: 1 !important;
+        padding: 20px 40px;
+        font-size: 1rem;
 
         ul {
-            padding: 20px 40px;
-            font-size: 1rem;
+            max-width: 400px;
+            margin: 0 auto;
 
             li {
                 padding: 4px 0;
@@ -153,41 +156,116 @@ header {
             // li
 
 
-            /* ======アコーディオンメニュー====== */
+        /* ======アコーディオンメニュー====== */
 
-            .accordion-menu {
-                padding: 8px;
-
-                a {
-                    display: block;
-                    padding: 2px 0;
-                    cursor: pointer;
-                }
+        .btn-accordion {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+  
+            .accordion-head {
+              margin: 8px 0;
+              display: block;
+              cursor: pointer;
             }
-
+  
+            .plus {
+              display: block;
+              position: relative;
+              width: 18px;
+              /* アイコンの幅 */
+              height: 18px;
+              /* アイコンの高さ */
+  
+              // 横棒・縦棒の共通スタイル
+              &::before,
+              &::after {
+                content: "";
+                position: absolute;
+                background-color: $text;
+                /* 文字と同じ色にする */
+                top: 50%;
+                left: 50%;
+                transition: transform 0.3s ease, opacity 0.3s ease;
+              }
+  
+              // 横棒（マイナス部分）
+              &::before {
+                width: 100%;
+                height: 1px;
+                transform: translate(-50%, -50%);
+              }
+  
+              // 縦棒（プラスにするためのパーツ）
+              &::after {
+                width: 1px;
+                height: 100%;
+                transform: translate(-50%, -50%);
+              }
+            }
+  
+            //   .plus
+  
+            &.is-open {
+              .plus {
+                &::after {
+                  // 縦棒を回転させて横棒に重ねる、または透明にする
+                  transform: translate(-50%, -50%) rotate(90deg);
+                  opacity: 0;
+                }
+  
+                &::before {
+                  // 横棒はそのままでも良いし、少し太くしたり色を変えたりも可能
+                }
+              }
+            }
+  
+            // .is-open
+  
+          }
+  
+          // .btn-accordion
+  
+          .accordion-body {
+            margin-top: 0;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: all 0.3s ease;
+  
             a {
-                display: block;
-                padding: 2px 0;
-                cursor: pointer;
-
-                img {
-                    width: 24px;
-                    margin: 20px 0;
-                }
-
-                span {
-                    font-size: .875rem;
-                }
+              display: block;
+              padding: 2px 0;
+              cursor: pointer;
+            }
+  
+          &.is-open {
+            margin-top: 8px;
+            min-height: 120px;
+            opacity: 1;
+          }
+  
+          }
+  
+          // .accordion-body
+  
+  
+          .inst {
+              margin: 18px 0 8px;
+              width: 20px;
+            }
+      
+            .sub-menu {
+      
+              span {
+                font-size: 0.875rem;
+              }
             }
 
         }
 
         // ul
 
-        .inst {
-            width: 22px;
-            height: auto;
-        }
 
     }
 
@@ -198,24 +276,50 @@ header {
 // header
 
 
-    /* =======ハンバーガーボタンアクティブ====== */
 
-    .hamburger-btn.active span:nth-child(1) {
-        top: 0px;
-        margin: 8px 0;
-        transform: rotate(45deg);
+/* =======JSヘッダースクロール固定====== */
+
+.header-sticky {
+    position: fixed;
+    top: 0;
+    right: 0;
+    visibility: visible;
+    // opacity: 0.95;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    animation: slideDown 0.3s ease-in-out;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
     }
-    
-    .hamburger-btn.active span:nth-child(2) {
-        top: -10px;
-        margin: 8px 0;
-        transform: rotate(-45deg);
+
+    100% {
+        transform: translateY(0%);
     }
-    
-    .hamburger-btn.active p {
-        opacity: 0;
-    }
-        /* =======ヘッダーメニューアクティブ====== */
-    .header-nav.active {
-        transform: translateX(0);
-    }
+}
+
+
+
+/* =======ハンバーガーボタンアクティブ====== */
+
+.hamburger-btn.active span:nth-child(1) {
+    top: 0px;
+    margin: 8px 0;
+    transform: rotate(45deg);
+}
+
+.hamburger-btn.active span:nth-child(2) {
+    top: -10px;
+    margin: 8px 0;
+    transform: rotate(-45deg);
+}
+
+.hamburger-btn.active p {
+    opacity: 0;
+}
+
+/* =======ヘッダーメニューアクティブ====== */
+.header-nav.active {
+    transform: translateX(0);
+}

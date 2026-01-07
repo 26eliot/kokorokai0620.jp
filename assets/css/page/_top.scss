@@ -4,11 +4,13 @@
 =============================================== */
 
 main {
-    padding: 70px 0 40px;
+    padding-top: 1rem;
+    background: $bg-main;
 
     #kv {
         margin: 0 auto;
         max-width: 480px;
+        min-height: 200px;
         width: 100%;
         position: relative;
 
@@ -67,7 +69,7 @@ main {
             // .catch_copy-outer
 
             .kv-inner {
-                margin: 200px 0 80px;
+                margin: 200px 0 40px;
                 text-align: center;
                 font-size: 1.375rem;
 
@@ -80,9 +82,34 @@ main {
         }
 
         // .kv-container
+
+        &::before,&::after {
+            content: "";
+            position: absolute;
+            bottom: -22%;
+        }
+
+        &::before {
+            background-image: url(../images/top_pouple01.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            left: 2%;
+            width: 120px;
+            height: 100px;
+        }
+
+        &::after {
+            background-image: url(../images/top_pouple02.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            right: 0;
+            width: 120px;
+            height: 100px;
+        }
     }
 
     // #kv
+
 
 
     /* ========topのお知らせ======= */
@@ -90,7 +117,7 @@ main {
     #news {
         margin: 0 auto;
         padding-bottom: 40px;
-        padding-top: 0;
+        padding-top: 16px;
 
         background: var(--color-yellow);
 

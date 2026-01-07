@@ -1,14 +1,18 @@
 @use "../global" as *;
 
 /* ===============================================
-# footer
+# footer footer-top
 =============================================== */
 #footer_top {
   background: var(--color-pink);
   padding-bottom: 20px;
 
   .footer_top-container {
-    margin: 0 1rem 20px;
+    margin: 0 auto;
+    max-width: 600px;
+
+    .bg-img {
+      margin: 1rem;
     padding: 1rem;
     background-image: url(../images/bg-footer-top.png);
     background-size: cover;
@@ -56,51 +60,110 @@
     // .footer_top-outer
 
   }
+  // .bg-img
+
+  }
 
   // .footer_top-container
 
 
+
   /* ========topに戻るボタン======= */
 
-  #page_top {
-    position: relative;
-    margin-left: auto;
-    margin-right: 1rem;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    background: $text;
-    border: 1px solid $text;
-    z-index: 2;
+  #back-page-top {
+    position: fixed;
+    bottom: 20px;
+    right: 0;
+    z-index: 10;
 
-    &::before {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 48%;
-      left: 50%;
-      width: 12px;
-      height: 12px;
-      border-left: 2px solid $white;
-      border-top: 2px solid $white;
-      border-radius: 2px;
-      transform: translate(-50%, -25%) rotate(45deg);
+    /* 初期状態は非表示 */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    /* ふわっと表示させる */
+
+    /* JSでクラスがついたら表示する */
+    &.is-active {
+      opacity: 1;
+      visibility: visible;
     }
+
+
+    .btn-top {
+      display: block;
+      position: relative;
+      margin-left: auto;
+      margin-right: 1rem;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: $text;
+      border: 1px solid $text;
+      z-index: 2;
+      cursor: pointer;
+      // アニメーションを滑らかに
+      transition: background-color 0.2s ease, border-color 0.2s ease;
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 48%;
+        left: 50%;
+        width: 12px;
+        height: 12px;
+        border-left: 2px solid $white;
+        border-top: 2px solid $white;
+        border-radius: 2px;
+        transform: translate(-50%, -25%) rotate(45deg);
+        transition: border-color 0.2s ease;
+      }
+
+      // ★ホバー時の設定
+      &:hover {
+        background: $white !important;
+        border-color: $text;
+
+        &::before {
+          border-color: $text;
+        }
+
+      }
+
+
+    }
+
+    // .btn_top
+
   }
+
+  // #back-page-top
 
 }
 
 // #footer-top
 
 
-/* ========footer======= */
+
+/* ===============================================
+# footer footer
+=============================================== */
 
 footer {
   margin: 0 auto;
   min-width: 380px;
+  background: $bg-main;
+  
+  background-image: url(../images/footer_sp.png);
+  // background-attachment: fixed; 
+  background-repeat: repeat-x;
+  background-position: bottom;
+  background-size: 400px 140px;
 
   .footer-container {
-    padding: 0 3rem;
+    padding: 0 3rem 32px;
+    margin: 0 auto;
+    max-width: 600px;
 
     h1 {
       width: 240px;
@@ -117,9 +180,187 @@ footer {
       }
     }
 
+
+    /* ========footer-menu======= */
+
+    nav {
+
+      ul {
+        max-width: 500px;
+        font-size: 1rem;
+
+        li {
+          padding: 4px 0;
+          border-bottom: 1px solid $text;
+
+
+          a {
+            padding: 4px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .arrow {
+              position: relative;
+              display: inline-block;
+              width: 20px;
+              height: 1px;
+              margin: 6.4px 0;
+              background-color: $text;
+            }
+
+            .arrow::before,
+            .arrow::after {
+              content: "";
+              position: absolute;
+              top: calc(50% - 0.5px);
+              right: 0;
+              width: 10px;
+              height: 1px;
+              background-color: $text;
+              transform-origin: calc(100% - 0.5px) 50%;
+            }
+
+            .arrow::before {
+              transform: rotate(45deg);
+            }
+
+            .arrow::after {
+              transform: rotate(-45deg);
+            }
+
+            //   .arrow
+
+          }
+
+          // li>a
+        }
+
+        // li
+
+
+        /* ======アコーディオンメニュー====== */
+
+        .btn-accordion {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .accordion-head {
+            margin: 8px 0;
+            display: block;
+            cursor: pointer;
+          }
+
+          .plus {
+            display: block;
+            position: relative;
+            width: 18px;
+            /* アイコンの幅 */
+            height: 18px;
+            /* アイコンの高さ */
+
+            // 横棒・縦棒の共通スタイル
+            &::before,
+            &::after {
+              content: "";
+              position: absolute;
+              background-color: $text;
+              /* 文字と同じ色にする */
+              top: 50%;
+              left: 50%;
+              transition: transform 0.3s ease, opacity 0.3s ease;
+            }
+
+            // 横棒（マイナス部分）
+            &::before {
+              width: 100%;
+              height: 1px;
+              transform: translate(-50%, -50%);
+            }
+
+            // 縦棒（プラスにするためのパーツ）
+            &::after {
+              width: 1px;
+              height: 100%;
+              transform: translate(-50%, -50%);
+            }
+          }
+
+          //   .plus
+
+          &.is-open {
+            .plus {
+              &::after {
+                // 縦棒を回転させて横棒に重ねる、または透明にする
+                transform: translate(-50%, -50%) rotate(90deg);
+                opacity: 0;
+              }
+
+              &::before {
+                // 横棒はそのままでも良いし、少し太くしたり色を変えたりも可能
+              }
+            }
+          }
+
+          // .is-open
+
+        }
+
+        // .btn-accordion
+
+        .accordion-body {
+          margin-top: 0;
+          max-height: 0;
+          overflow: hidden;
+          opacity: 0;
+          transition: all 0.3s ease;
+
+          a {
+            display: block;
+            padding: 2px 0;
+            cursor: pointer;
+          }
+
+        &.is-open {
+          margin-top: 8px;
+          min-height: 120px;
+          opacity: 1;
+        }
+
+        }
+
+        // .accordion-body
+
+        .inst {
+          margin: 18px 0 8px;
+          width: 20px;
+        }
+  
+        .sub-menu {
+  
+          span {
+            font-size: 0.875rem;
+          }
+        }
+
+      }
+
+      // ul
+    }
+
+    // nav
+
   }
 
   // .footer-container
+
+  small {
+    display: block;
+    margin: 80px 0;
+    padding-bottom: 20px;
+    text-align: center;
+  }
 
 }
 
