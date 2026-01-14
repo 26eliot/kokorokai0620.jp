@@ -1,0 +1,73 @@
+@use "../global" as *;
+/* ===============================================
+# page
+=============================================== */
+
+#plus {
+  background: $green;
+
+  .plus-container {
+    margin: 0 auto;
+    width: 100%;
+
+    @media (min-width:376px) {
+      max-width: 500px;
+    }
+
+    @media (min-width:500px) {
+      max-width: 600px;
+    }
+
+    @media (min-width:785px) {
+      max-width: 1000px;
+    }
+
+    .plus-frame {
+      margin: 0 auto;
+      margin-bottom: 100px;
+      width: calc(100% - 24px);
+      position: relative;
+
+      img {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        height: auto;
+      }
+
+      .cc-plus {
+        padding: 12px 28px;
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap;
+        width: fit-content;
+        border-radius: 24px;
+        background: $green-2nd;
+
+        p {
+          font-size: 1.125em;
+          color: $white;
+        }
+      }
+
+      // .cc-plus
+
+    }
+
+    // .plus-frame
+
+    .plus-2nd {
+      @media (min-width:600px) {     
+          padding-top: 0;
+      }
+    }
+
+  }
+
+  // .plus-container
+
+}
+
+// #plus

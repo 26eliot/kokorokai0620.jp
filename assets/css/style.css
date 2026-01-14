@@ -87,6 +87,12 @@ h2 {
   text-align: center;
 }
 
+h3 {
+  padding-top: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
 p {
   line-height: 1.3rem;
 }
@@ -144,6 +150,67 @@ button {
 
 .wave-pink {
   fill: var(--color-pink) !important;
+}
+
+.wave-orange {
+  fill: var(--color-orange);
+}
+
+.wage-blue {
+  fill: var(--color-blue);
+}
+
+/* ========事業内容見出し======= */
+.survice-head {
+  margin: 0 auto 16px;
+  padding: 6px 16px;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+  line-height: 1.2;
+  background: white;
+  border-radius: 50px;
+}
+
+/* ========事業内容2ndコピー======= */
+.cc-2nd-outer {
+  margin: 0 auto;
+}
+.cc-2nd-outer .cc-2nd-inner {
+  padding-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 600px) {
+  .cc-2nd-outer .cc-2nd-inner {
+    flex-direction: row;
+  }
+}
+@media (min-width: 600px) {
+  .cc-2nd-outer .cc-2nd-inner:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+}
+.cc-2nd-outer .cc-2nd-inner img {
+  display: block;
+  width: 300px;
+  height: auto;
+}
+.cc-2nd-outer .cc-2nd-inner .cc-2nd-text p {
+  padding: 0 54px;
+  align-self: start;
+}
+@media (min-width: 600px) {
+  .cc-2nd-outer .cc-2nd-inner .cc-2nd-text p {
+    padding: 20px 8px 0;
+  }
+}
+@media (min-width: 600px) {
+  .cc-2nd-outer .cc-2nd-inner .cc-2nd-text {
+    padding-top: 1rem;
+  }
 }
 
 /* ===============================================
@@ -222,8 +289,6 @@ main {
 }
 main #kv {
   margin: 0 auto;
-  max-width: 480px;
-  min-height: 200px;
   width: 100%;
   position: relative;
   /* ========二人ペアイラスト======= */
@@ -235,8 +300,20 @@ main #kv {
 }
 @media (min-width: 500px) {
   main #kv {
-    max-width: 600px;
+    max-width: 700px;
   }
+}
+@media (min-width: 785px) {
+  main #kv {
+    max-width: 1000px;
+  }
+}
+main #kv .kv-container {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 main #kv .kv-container .kv-frame {
   margin: 0 auto;
@@ -245,7 +322,7 @@ main #kv .kv-container .kv-frame {
 main #kv .kv-container .kv-frame img {
   display: block;
   margin: 0 auto;
-  width: 100%;
+  width: 90%;
   height: auto;
 }
 main #kv .kv-container .catch_copy-outer {
@@ -256,6 +333,7 @@ main #kv .kv-container .catch_copy-outer {
   height: 200px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 1rem;
 }
 @media (min-width: 420px) {
@@ -266,6 +344,13 @@ main #kv .kv-container .catch_copy-outer {
 @media (min-width: 500px) {
   main #kv .kv-container .catch_copy-outer {
     top: 270px;
+    max-width: 700px;
+  }
+}
+@media (min-width: 785px) {
+  main #kv .kv-container .catch_copy-outer {
+    top: 320px;
+    max-width: 1000px;
   }
 }
 main #kv .kv-container .catch_copy-outer .catch_copy {
@@ -315,18 +400,18 @@ main #kv::before {
     height: 120px;
   }
 }
-@media (min-width: 600px) {
+@media (min-width: 670px) {
   main #kv::before {
     width: 160px;
     height: 140px;
-    bottom: -25%;
+    bottom: -20%;
   }
 }
 @media (min-width: 768px) {
   main #kv::before {
     width: 180px;
     height: 140px;
-    bottom: -27%;
+    bottom: -19%;
   }
 }
 main #kv::after {
@@ -343,18 +428,18 @@ main #kv::after {
     height: 110px;
   }
 }
-@media (min-width: 600px) {
+@media (min-width: 670px) {
   main #kv::after {
     width: 160px;
     height: 130px;
-    bottom: -25%;
+    bottom: -20%;
   }
 }
 @media (min-width: 768px) {
   main #kv::after {
     width: 180px;
     height: 130px;
-    bottom: -27%;
+    bottom: -19%;
   }
 }
 main #news {
@@ -373,18 +458,43 @@ main #news .news-container .news-outer {
   width: 100%;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 @media (min-width: 500px) {
   main #news .news-container .news-outer {
+    gap: 2.5rem;
+  }
+}
+@media (min-width: 785px) {
+  main #news .news-container .news-outer {
+    gap: 3rem;
+  }
+}
+@media (min-width: 880px) {
+  main #news .news-container .news-outer {
     gap: 4rem;
   }
 }
-main #news .news-container .news-outer .news-brock {
+main #news .news-container .news-outer a {
+  display: block;
+  width: 160px;
+}
+@media (min-width: 376px) and (max-width: 670px) {
+  main #news .news-container .news-outer a:nth-child(n+3) {
+    display: none;
+  }
+}
+@media (min-width: 671px) and (max-width: 880px) {
+  main #news .news-container .news-outer a:nth-child(4) {
+    display: none !important;
+  }
+}
+main #news .news-container .news-outer a .news-brock {
   width: 100%;
   max-width: 220px;
 }
-main #news .news-container .news-outer .news-brock .date {
+main #news .news-container .news-outer a .news-brock .date {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -392,15 +502,15 @@ main #news .news-container .news-outer .news-brock .date {
   margin: 4px;
 }
 @media (min-width: 420px) {
-  main #news .news-container .news-outer .news-brock .date {
+  main #news .news-container .news-outer a .news-brock .date {
     margin-top: 8px;
   }
 }
-main #news .news-container .news-outer .news-brock .date span {
+main #news .news-container .news-outer a .news-brock .date span {
   font-size: 0.875rem;
   letter-spacing: 2px;
 }
-main #news .news-container .news-outer .news-brock .date p {
+main #news .news-container .news-outer a .news-brock .date p {
   padding: 0 10px;
   display: inline-block;
   font-size: 0.875rem;
@@ -408,7 +518,7 @@ main #news .news-container .news-outer .news-brock .date p {
   background: #D17E36;
   border-radius: 4px;
 }
-main #news .news-container .news-outer .news-brock .news-title {
+main #news .news-container .news-outer a .news-brock .news-title {
   overflow: hidden;
   height: 2.2em;
   font-size: 1rem;
@@ -417,7 +527,7 @@ main #news .news-container .news-outer .news-brock .news-title {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
 }
-main #news .news-container .news-outer .news-brock .news-text {
+main #news .news-container .news-outer a .news-brock .news-text {
   margin-top: 8px;
   font-size: 0.875rem;
 }
@@ -457,6 +567,65 @@ main #service .service-container .service-outer .service-block .top-logo-img {
 }
 main #service .service-container .service-outer .service-block p {
   font-size: 1rem;
+}
+
+/* ===============================================
+# page
+=============================================== */
+#plus {
+  background: #DAE8C0;
+}
+#plus .plus-container {
+  margin: 0 auto;
+  width: 100%;
+}
+@media (min-width: 376px) {
+  #plus .plus-container {
+    max-width: 500px;
+  }
+}
+@media (min-width: 500px) {
+  #plus .plus-container {
+    max-width: 600px;
+  }
+}
+@media (min-width: 785px) {
+  #plus .plus-container {
+    max-width: 1000px;
+  }
+}
+#plus .plus-container .plus-frame {
+  margin: 0 auto;
+  margin-bottom: 100px;
+  width: calc(100% - 24px);
+  position: relative;
+}
+#plus .plus-container .plus-frame img {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+}
+#plus .plus-container .plus-frame .cc-plus {
+  padding: 12px 28px;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 24px;
+  background: #85D136;
+}
+#plus .plus-container .plus-frame .cc-plus p {
+  font-size: 1.125em;
+  color: #fff;
+}
+@media (min-width: 600px) {
+  #plus .plus-container .plus-2nd {
+    padding-top: 0;
+  }
 }
 
 /* ===============================================
@@ -531,7 +700,7 @@ header nav {
   font-size: 1rem;
 }
 header nav ul {
-  max-width: 400px;
+  max-width: 540px;
   margin: 0 auto;
   /* ======アコーディオンメニュー====== */
 }
@@ -716,7 +885,7 @@ header nav ul .sub-menu span {
 #footer_top .footer_top-container .bg-img .footer_top-outer {
   text-align: center;
 }
-#footer_top .footer_top-container .bg-img .footer_top-outer h4 {
+#footer_top .footer_top-container .bg-img .footer_top-outer .contact-text {
   font-size: 1.375rem;
   margin-bottom: 1rem;
 }
@@ -813,7 +982,7 @@ footer {
 footer .footer-container {
   padding: 0 3rem 32px;
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 700px;
   /* ========footer-menu======= */
 }
 footer .footer-container h1 {
@@ -829,7 +998,7 @@ footer .footer-container .address p {
   line-height: 1.5;
 }
 footer .footer-container nav ul {
-  max-width: 500px;
+  max-width: 540px;
   font-size: 1rem;
   /* ======アコーディオンメニュー====== */
 }
@@ -964,7 +1133,7 @@ footer small {
 .btn:hover {
   box-shadow: none;
   transform: translate(4px, 4px);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
 .btn:active {
   background: #B44906;
