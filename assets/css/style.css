@@ -1092,7 +1092,6 @@ header nav ul .sub-menu span {
 =============================================== */
 footer {
   margin: 0 auto;
-  min-width: 380px;
   background: #F8F8EC;
   background-image: url(../images/footer_sp.png);
   background-repeat: repeat-x;
