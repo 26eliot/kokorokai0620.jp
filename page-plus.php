@@ -1,83 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php get_header();  ?>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>こころ会</title>
-  <link rel="icon" href="assets/images/icon/favicon.svg">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css" />
-  <link rel="stylesheet" href="assets/css/style.css">
-
-</head>
-
-<body>
-
-  <header class="js-header">
-
-    <div class="header-container">
-
-      <h1>
-        <a href="index.html">
-          <img class="header-logo" src="assets/images/logo_h1_sp.png" alt="一般社団法人こころ会">
-        </a>
-      </h1>
-
-      <!-- ハンバーガーボタン -->
-      <button id="js-hamburger" class="hamburger-btn">
-        <span class=""></span>
-        <span class=""></span>
-        <p class="">MENU
-        <p>
-      </button>
-      <!-- ハンバーガーボタン -->
-
-    </div>
-    <!-- .header-container -->
-
-    <!-- ハンバーガーメニュー -->
-    <nav id="js-nav" class="header-nav">
-
-      <ul>
-
-        <li><a href="index.html">TOPページ<span class="arrow"></span></a></li>
-        <li><a href="schedule.html">お知らせ<span class="arrow"></span></a></li>
-
-        <li class="btn-accordion js-ac">
-          <button class="accordion-head">事業内容</button>
-          <span class="plus"></span>
-        </li>
-        <!-- アコーディオンメニュー -->
-        <div class="accordion-body">
-          <a href="ponte.html">就労継続支援B型　ぽんて</a>
-          <a href="plus.html">就労継続支援B型　ぷらす</a>
-          <a href="sakura.html">地域活動センター　さくら</a>
-          <a href="PW.html">相談支援　ぽんて</a>
-        </div>
-        <!-- アコーディオンメニュー閉じる -->
-
-
-        <li><a href="about.html">会社概要<span class="arrow"></span></a></li>
-
-        <a href="#"><img class="inst" src="assets/images/icon/instagram.svg" alt="instagram"></a>
-        <div class="sub-menu">
-          <a href="contact.html"><span>お問い合わせ</span></a>
-          <a href="privacy.html"><span>プライバシーポリシー</span></a>
-        </div>
-
-      </ul>
-
-    </nav>
-    <!-- ハンバーガーメニュー閉じる -->
-
-  </header>
-
-  <!-- MAIN -->
-  <main>
+<!-- MAIN -->
+  <main id="plus">
 
     <h4 class="survice-head">就労継続支援B型 ぷらす</h4>
 
-    <section id="plus">
+    <section id="plus-top">
 
       <div class="plus-container">
 
@@ -582,13 +510,6 @@
 
 
     <section id="footer_top">
-      <svg class="bg-under wave-green" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 84.628">
-        <g transform="translate(-0.699 -691.113)">
-          <path class=""
-            d="M.147,768.712c57.094-47.018,81.6-61.975,159.769-62.034s105.509,60.44,215.584,62.034c84.746-.905,131.547-61.365,208.361-62.034,112.338-1.929,156.482,62.034,156.482,62.034V7.26S653.315,66.893,583.861,66.893,460.738,7.162,375.5,7.26,234.329,66.893,159.916,66.893,32.778,41.465.147,7.26C-.542,57.722-.5,765.563.147,768.712Z"
-            transform="translate(0.355 -7.26)" />
-        </g>
-      </svg>
 
 
       <div class="footer_top-container">
@@ -640,80 +561,16 @@
         </section>
         <!-- footer_top -->
 
-            <svg class=" bg-under wave-pink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 84.628">
-          <g transform="translate(-0.699 -691.113)">
-            <path class=""
-              d="M.147,768.712c57.094-47.018,81.6-61.975,159.769-62.034s105.509,60.44,215.584,62.034c84.746-.905,131.547-61.365,208.361-62.034,112.338-1.929,156.482,62.034,156.482,62.034V7.26S653.315,66.893,583.861,66.893,460.738,7.162,375.5,7.26,234.329,66.893,159.916,66.893,32.778,41.465.147,7.26C-.542,57.722-.5,765.563.147,768.712Z"
-              transform="translate(0.355 -7.26)" />
-          </g>
-          </g>
-          </svg>
-
+        
+        <svg class=" bg-under wave-pink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 84.628">
+      <g transform="translate(-0.699 -691.113)">
+        <path class=""
+          d="M.147,768.712c57.094-47.018,81.6-61.975,159.769-62.034s105.509,60.44,215.584,62.034c84.746-.905,131.547-61.365,208.361-62.034,112.338-1.929,156.482,62.034,156.482,62.034V7.26S653.315,66.893,583.861,66.893,460.738,7.162,375.5,7.26,234.329,66.893,159.916,66.893,32.778,41.465.147,7.26C-.542,57.722-.5,765.563.147,768.712Z"
+          transform="translate(0.355 -7.26)" />
+      </g>
+      </g>
+      </svg>
   </main>
   <!-- MAIN -->
 
-
-  <footer>
-
-    <div class="footer-container">
-
-      <h1>
-        <a href="index.html">
-          <img class="header-logo" src="assets/images/logo_h1_sp.png" alt="一般社団法人こころ会">
-        </a>
-      </h1>
-
-      <div class="address">
-        <p>〒356-0059</p>
-        <p>埼玉県ふじみ野市桜ヶ丘1-38-34</p>
-        <p>TEL : 049-293-6729</p>
-      </div>
-
-      <nav>
-
-        <ul>
-
-          <li><a href="index.html">TOPページ<span class="arrow"></span></a></li>
-
-          <li><a href="schedule.html">お知らせ<span class="arrow"></span></a></li>
-
-          <li class="btn-accordion js-ac">
-            <button class="accordion-head">事業内容</button>
-            <span class="plus"></span>
-          </li>
-          <!-- アコーディオンメニュー -->
-          <div class="accordion-body">
-            <a href="ponte.html">就労継続支援B型　ぽんて</a>
-            <a href="plus.html">就労継続支援B型　ぷらす</a>
-            <a href="sakura.html">地域活動センター　さくら</a>
-            <a href="PW.html">相談支援　ぽんて</a>
-          </div>
-          <!-- アコーディオンメニュー閉じる -->
-
-          <li><a href="about.html">会社概要<span class="arrow"></span></a></li>
-
-          <a href="#"><img class="inst" src="assets/images/icon/instagram.svg" alt="instagram"></a>
-          <div class="sub-menu">
-            <a href="contact.html"><span>お問い合わせ</span></a>
-            <a href="privacy.html"><span>プライバシーポリシー</span></a>
-          </div>
-
-        </ul>
-
-
-      </nav>
-
-
-    </div>
-    <!-- footer-container -->
-
-    <small>©︎ KOKOROKAI All Rights Reserved.</small>
-
-  </footer>
-
-
-  <!-- jsのファイル読み込み -->
-  <script src="assets/js/script.js"></script>
-</body>
-
-</html>
+  <?php get_footer(); ?>

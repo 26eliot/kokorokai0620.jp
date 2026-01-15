@@ -3,7 +3,7 @@
 # topページ
 =============================================== */
 
-main {
+#top {
     padding-top: 1rem;
     background: $bg-main;
 
@@ -47,7 +47,7 @@ main {
             // .kv-frame
 
             .catch_copy-outer {
-                padding: 0 2px;
+                padding: 0 2px 24px;
                 position: absolute;
                 top: 180px;
                 width: 100%;
@@ -56,21 +56,7 @@ main {
                 flex-direction: column;
                 justify-content: center;
                 gap: 1rem;
-
-                @media (min-width:420px) {
-                    top: 220px;
-
-                }
-
-                @media (min-width:500px) {
-                    top: 270px;
-                    max-width: 700px;
-                }
-
-                @media (min-width:785px) {
-                    top: 320px;
-                    max-width: 1000px;
-                }
+                
 
                 .catch_copy {
                     background: $btn-cc;
@@ -103,12 +89,26 @@ main {
                 margin: 200px 0 40px;
                 text-align: center;
                 font-size: 1.375rem;
-
+                
                 span {
                     color: $text-sub;
                     font-size: 1.375rem;
                 }
+                
+                @media (min-width:420px) {
+                    margin: 190px 0 40px;
+                }
+                
+                @media (min-width:500px) {
+                    margin: 170px 0 40px;
+                }
+        
+                @media (min-width:785px) {
+                    max-width: 1000px;
+                }
+
             }
+            // kv-inner
 
         }
 

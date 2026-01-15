@@ -1,241 +1,254 @@
 @use "../global" as *;
+
 /* ===============================================
 # page
 =============================================== */
-
 #plus {
   background: $green;
 
-  .plus-container {
-    margin: 0 auto;
-    padding-bottom: 12px;
-    width: 100%;
+  #plus-top {
 
-    @media (min-width:376px) {
-      max-width: 500px;
-    }
-
-    @media (min-width:500px) {
-      max-width: 600px;
-    }
-
-    @media (min-width:785px) {
-      max-width: 1000px;
-    }
-
-    .plus-frame {
+    .plus-container {
       margin: 0 auto;
-      margin-bottom: 100px;
-      width: calc(100% - 24px);
-      position: relative;
+      padding-bottom: 12px;
+      width: 100%;
 
-      img {
-        display: block;
+      @media (min-width:376px) {
+        max-width: 500px;
+      }
+
+      @media (min-width:500px) {
+        max-width: 600px;
+      }
+
+      @media (min-width:785px) {
+        max-width: 1000px;
+      }
+
+      .plus-frame {
         margin: 0 auto;
-        width: 100%;
-        height: auto;
-      }
-
-      .cc-plus {
-        padding: 12px 28px;
-        position: absolute;
-        top: 96%;
-        left: 50%;
-        transform: translateX(-50%);
-        white-space: nowrap;
-        width: fit-content;
-        border-radius: 24px;
-        background: $green-2nd;
-
-        p {
-          font-size: 1.125em;
-          color: $white;
-        }
-      }
-
-      // .cc-plus
-
-    }
-
-    // .plus-frame
-
-    .plus-2nd {
-      @media (min-width:600px) {
-        padding-top: 0;
-      }
-    }
-
-  }
-
-  // .plus-container
-
-}
-
-// #plus
-
-
-
-/* ========事業所方針======= */
-
-#policy {
-  background: $orange;
-
-  .policy-container {
-    padding: 12px 0 20px;
-
-    .policy-outer {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-
-      .policy-brock {
-        max-width: 240px;
-        height: auto;
-      }
-
-      // .policy-brock
-
-    }
-
-    // .policy-outer
-
-  }
-
-  // .policy-container
-
-
-}
-
-// #policy
-
-/* ========1日のスケジュール======= */
-
-#schedule {
-  background: $pink;
-
-  .timeline-container {
-    margin: 0 auto;
-    padding: 12px 0 20px;
-    max-width: 600px;
- 
-    .timeline {
-      margin-left: 50px;
-      padding-top: 20px;
-      position: relative;
-      border-left: 2px solid $pink-2nd;
-
-      .timeline-brock {
-        margin-bottom: 40px;
-        padding-left: 30px;
+        margin-bottom: 100px;
+        width: calc(100% - 24px);
         position: relative;
-        display: flex;
-        flex-direction: column;
-
-        &::before {
-          content: '';
-          position: absolute;
-          left: -21px;
-          top: 0;
-          width: 40px;
-          height: 40px;
-          background-size: contain;
-          border-radius: 50%;
-        }
-        
-        &:nth-child(1)::before {
-          background-image: url('../images/icon/9000.svg');
-        }
-        &:nth-child(2)::before {
-          background-image: url('../images/icon/1000.svg');
-        }
-        &:nth-child(3)::before {
-          background-image: url('../images/icon/1200.svg');
-        }
-        &:nth-child(4)::before {
-          background-image: url('../images/icon/1300.svg');
-        }
-        &:nth-child(5)::before {
-          background-image: url('../images/icon/1500.svg');
-        }
-
-        // 時計アイコン
-
-        .time {
-          padding-bottom: 2px;
-          font-size: 1.5rem;
-          letter-spacing: 1px;
-          border-bottom: 2px dotted $pink-2nd;
-          width: fit-content;
-        }
 
         img {
-          margin: 0 auto;
           display: block;
-          padding-top: 8px;
+          margin: 0 auto;
+          width: 100%;
+          height: auto;
+        }
+
+        .cc-plus {
+          padding: 12px 28px;
+          position: absolute;
+          top: 96%;
+          left: 50%;
+          transform: translateX(-50%);
+          white-space: nowrap;
+          width: fit-content;
+          border-radius: 24px;
+          background: $green-2nd;
+
+          p {
+            font-size: 1.125em;
+            color: $white;
+          }
+        }
+
+        // .cc-plus
+
+      }
+
+      // .plus-frame
+
+      .plus-2nd {
+        @media (min-width:600px) {
+          padding-top: 0;
+        }
+      }
+
+    }
+
+    // .plus-container
+
+  }
+
+  // #plus
+
+
+
+  /* ========事業所方針======= */
+
+  #policy {
+    background: $orange;
+
+    .policy-container {
+      padding: 12px 0 20px;
+
+      .policy-outer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .policy-brock {
           max-width: 240px;
           height: auto;
         }
 
-        .timeline-text {
-          padding: 12px 20px 4px;
-          line-height: 1.5;
+        // .policy-brock
+
+      }
+
+      // .policy-outer
+
+    }
+
+    // .policy-container
+
+
+  }
+
+  // #policy
+
+  /* ========1日のスケジュール======= */
+
+  #schedule {
+    background: $pink;
+
+    .timeline-container {
+      margin: 0 auto;
+      padding: 12px 0 20px;
+      max-width: 600px;
+
+      .timeline {
+        margin-left: 50px;
+        padding-top: 20px;
+        position: relative;
+        border-left: 2px solid $pink-2nd;
+
+        .timeline-brock {
+          margin-bottom: 40px;
+          padding-left: 30px;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+
+          &::before {
+            content: '';
+            position: absolute;
+            left: -21px;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            background-size: contain;
+            border-radius: 50%;
+          }
+
+          &:nth-child(1)::before {
+            background-image: url('../images/icon/9000.svg');
+          }
+
+          &:nth-child(2)::before {
+            background-image: url('../images/icon/1000.svg');
+          }
+
+          &:nth-child(3)::before {
+            background-image: url('../images/icon/1200.svg');
+          }
+
+          &:nth-child(4)::before {
+            background-image: url('../images/icon/1300.svg');
+          }
+
+          &:nth-child(5)::before {
+            background-image: url('../images/icon/1500.svg');
+          }
+
+          // 時計アイコン
+
+          .time {
+            padding-bottom: 2px;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            border-bottom: 2px dotted $pink-2nd;
+            width: fit-content;
+          }
+
+          img {
+            margin: 0 auto;
+            display: block;
+            padding-top: 8px;
+            max-width: 240px;
+            height: auto;
+          }
+
+          .timeline-text {
+            padding: 12px 20px 4px;
+            line-height: 1.5;
+          }
+
         }
 
+        // .timeline-brock
+
       }
 
-      // .timeline-brock
+      // .timeline
 
     }
 
-    // .timeline
+    // .timeline-container
 
   }
 
-  // .timeline-container
-
-}
-
-// schedule
+  // schedule
 
 
-/* ========ご利用の流れ======= */
+  /* ========ご利用の流れ======= */
 
-#flow {
-  background: $blue;
+  #flow {
+    background: $blue;
 
-  .flow-outer {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    gap: 12px;
-
-    .flow-brock {
+    .flow-outer {
       display: flex;
-      align-items: center;
-      position: relative;
+      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 12px;
 
-      .step-icon {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        z-index: 2;
-      } 
-      
-      .flow-card {
-        background: $white;
-        border-radius: 24px;
-        padding: 20px 20px 20px 50px;
-        box-shadow: 2px 4px 4px 0 $gray ;
+      .flow-brock {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        .step-icon {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          z-index: 2;
+        }
+
+        .flow-card {
+          background: $white;
+          border-radius: 24px;
+          padding: 20px 20px 20px 50px;
+          box-shadow: 2px 4px 4px 0 $gray ;
+        }
+
+        // flow-card
+
       }
-      // flow-card
+
+      // flow-brock
 
     }
-    // flow-brock
+
+    // flow-outer
 
   }
-  // flow-outer
-  
+
+  // #flow
+
 }
 
-// #flow
+// #plus

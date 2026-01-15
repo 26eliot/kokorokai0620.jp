@@ -281,52 +281,52 @@ button {
 /* ===============================================
 # topページ
 =============================================== */
-main {
+#top {
   padding-top: 1rem;
   background: #F8F8EC;
   /* ========topのお知らせ======= */
   /* ========topの事業内容======= */
 }
-main #kv {
+#top #kv {
   margin: 0 auto;
   width: 100%;
   position: relative;
   /* ========二人ペアイラスト======= */
 }
 @media (min-width: 376px) {
-  main #kv {
+  #top #kv {
     max-width: 500px;
   }
 }
 @media (min-width: 500px) {
-  main #kv {
+  #top #kv {
     max-width: 700px;
   }
 }
 @media (min-width: 785px) {
-  main #kv {
+  #top #kv {
     max-width: 1000px;
   }
 }
-main #kv .kv-container {
+#top #kv .kv-container {
   margin: 0 auto;
   max-width: 1200px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-main #kv .kv-container .kv-frame {
+#top #kv .kv-container .kv-frame {
   margin: 0 auto;
   width: calc(100% - 24px);
 }
-main #kv .kv-container .kv-frame img {
+#top #kv .kv-container .kv-frame img {
   display: block;
   margin: 0 auto;
   width: 90%;
   height: auto;
 }
-main #kv .kv-container .catch_copy-outer {
-  padding: 0 2px;
+#top #kv .kv-container .catch_copy-outer {
+  padding: 0 2px 24px;
   position: absolute;
   top: 180px;
   width: 100%;
@@ -336,24 +336,7 @@ main #kv .kv-container .catch_copy-outer {
   justify-content: center;
   gap: 1rem;
 }
-@media (min-width: 420px) {
-  main #kv .kv-container .catch_copy-outer {
-    top: 220px;
-  }
-}
-@media (min-width: 500px) {
-  main #kv .kv-container .catch_copy-outer {
-    top: 270px;
-    max-width: 700px;
-  }
-}
-@media (min-width: 785px) {
-  main #kv .kv-container .catch_copy-outer {
-    top: 320px;
-    max-width: 1000px;
-  }
-}
-main #kv .kv-container .catch_copy-outer .catch_copy {
+#top #kv .kv-container .catch_copy-outer .catch_copy {
   background: #FEFBF3;
   border-radius: 50px;
   width: -moz-fit-content;
@@ -361,32 +344,47 @@ main #kv .kv-container .catch_copy-outer .catch_copy {
   display: inline-block;
   box-shadow: 2px 3px 0 0 #9C7F4D;
 }
-main #kv .kv-container .catch_copy-outer .catch_copy p {
+#top #kv .kv-container .catch_copy-outer .catch_copy p {
   padding: 4px 1.5rem;
   font-size: 1rem;
   line-height: 1.4rem;
 }
-main #kv .kv-container .catch_copy-outer .catch_copy:nth-child(odd) {
+#top #kv .kv-container .catch_copy-outer .catch_copy:nth-child(odd) {
   align-self: flex-start;
 }
-main #kv .kv-container .catch_copy-outer .catch_copy:nth-child(even) {
+#top #kv .kv-container .catch_copy-outer .catch_copy:nth-child(even) {
   align-self: flex-end;
 }
-main #kv .kv-container .kv-inner {
+#top #kv .kv-container .kv-inner {
   margin: 200px 0 40px;
   text-align: center;
   font-size: 1.375rem;
 }
-main #kv .kv-container .kv-inner span {
+#top #kv .kv-container .kv-inner span {
   color: #D95B0D;
   font-size: 1.375rem;
 }
-main #kv::before, main #kv::after {
+@media (min-width: 420px) {
+  #top #kv .kv-container .kv-inner {
+    margin: 190px 0 40px;
+  }
+}
+@media (min-width: 500px) {
+  #top #kv .kv-container .kv-inner {
+    margin: 170px 0 40px;
+  }
+}
+@media (min-width: 785px) {
+  #top #kv .kv-container .kv-inner {
+    max-width: 1000px;
+  }
+}
+#top #kv::before, #top #kv::after {
   content: "";
   position: absolute;
   bottom: -22%;
 }
-main #kv::before {
+#top #kv::before {
   background-image: url(../images/top_pouple01.png);
   background-repeat: no-repeat;
   background-size: contain;
@@ -395,26 +393,26 @@ main #kv::before {
   height: 100px;
 }
 @media (min-width: 500px) {
-  main #kv::before {
+  #top #kv::before {
     width: 140px;
     height: 120px;
   }
 }
 @media (min-width: 670px) {
-  main #kv::before {
+  #top #kv::before {
     width: 160px;
     height: 140px;
     bottom: -20%;
   }
 }
 @media (min-width: 768px) {
-  main #kv::before {
+  #top #kv::before {
     width: 180px;
     height: 140px;
     bottom: -19%;
   }
 }
-main #kv::after {
+#top #kv::after {
   background-image: url(../images/top_pouple02.png);
   background-repeat: no-repeat;
   background-size: contain;
@@ -423,37 +421,37 @@ main #kv::after {
   height: 100px;
 }
 @media (min-width: 500px) {
-  main #kv::after {
+  #top #kv::after {
     width: 140px;
     height: 110px;
   }
 }
 @media (min-width: 670px) {
-  main #kv::after {
+  #top #kv::after {
     width: 160px;
     height: 130px;
     bottom: -20%;
   }
 }
 @media (min-width: 768px) {
-  main #kv::after {
+  #top #kv::after {
     width: 180px;
     height: 130px;
     bottom: -19%;
   }
 }
-main #news {
+#top #news {
   margin: 0 auto;
   padding-bottom: 40px;
   padding-top: 16px;
   background: var(--color-yellow);
 }
-main #news .news-container {
+#top #news .news-container {
   width: 100%;
   padding: 0 3rem;
   margin-top: 20px;
 }
-main #news .news-container .news-outer {
+#top #news .news-container .news-outer {
   margin: 0 auto 32px;
   width: 100%;
   display: flex;
@@ -462,44 +460,44 @@ main #news .news-container .news-outer {
   gap: 2rem;
 }
 @media (min-width: 500px) {
-  main #news .news-container .news-outer {
+  #top #news .news-container .news-outer {
     gap: 2.5rem;
   }
 }
 @media (min-width: 785px) {
-  main #news .news-container .news-outer {
+  #top #news .news-container .news-outer {
     gap: 3rem;
   }
 }
 @media (min-width: 880px) {
-  main #news .news-container .news-outer {
+  #top #news .news-container .news-outer {
     gap: 4rem;
   }
 }
-main #news .news-container .news-outer a {
+#top #news .news-container .news-outer a {
   display: block;
   width: 160px;
 }
 @media (max-width: 350px) {
-  main #news .news-container .news-outer a:nth-child(n+3) {
+  #top #news .news-container .news-outer a:nth-child(n+3) {
     display: none;
   }
 }
 @media (min-width: 350px) and (max-width: 670px) {
-  main #news .news-container .news-outer a:nth-child(n+3) {
+  #top #news .news-container .news-outer a:nth-child(n+3) {
     display: none;
   }
 }
 @media (min-width: 671px) and (max-width: 880px) {
-  main #news .news-container .news-outer a:nth-child(4) {
+  #top #news .news-container .news-outer a:nth-child(4) {
     display: none !important;
   }
 }
-main #news .news-container .news-outer a .news-brock {
+#top #news .news-container .news-outer a .news-brock {
   width: 100%;
   max-width: 220px;
 }
-main #news .news-container .news-outer a .news-brock .date {
+#top #news .news-container .news-outer a .news-brock .date {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -507,15 +505,15 @@ main #news .news-container .news-outer a .news-brock .date {
   margin: 4px;
 }
 @media (min-width: 420px) {
-  main #news .news-container .news-outer a .news-brock .date {
+  #top #news .news-container .news-outer a .news-brock .date {
     margin-top: 8px;
   }
 }
-main #news .news-container .news-outer a .news-brock .date span {
+#top #news .news-container .news-outer a .news-brock .date span {
   font-size: 0.875rem;
   letter-spacing: 2px;
 }
-main #news .news-container .news-outer a .news-brock .date p {
+#top #news .news-container .news-outer a .news-brock .date p {
   padding: 0 10px;
   display: inline-block;
   font-size: 0.875rem;
@@ -523,7 +521,7 @@ main #news .news-container .news-outer a .news-brock .date p {
   background: #D17E36;
   border-radius: 4px;
 }
-main #news .news-container .news-outer a .news-brock .news-title {
+#top #news .news-container .news-outer a .news-brock .news-title {
   overflow: hidden;
   height: 2.2em;
   font-size: 1rem;
@@ -532,21 +530,21 @@ main #news .news-container .news-outer a .news-brock .news-title {
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
 }
-main #news .news-container .news-outer a .news-brock .news-text {
+#top #news .news-container .news-outer a .news-brock .news-text {
   margin-top: 8px;
   font-size: 0.875rem;
 }
-main #service {
+#top #service {
   margin: 0 auto;
   padding-bottom: 40px;
   background: #DAE8C0;
 }
-main #service .service-container {
+#top #service .service-container {
   width: 100%;
   padding: 0 1rem;
   margin: 0 auto;
 }
-main #service .service-container .service-outer {
+#top #service .service-container .service-outer {
   margin: 20px auto 0;
   max-width: 440px;
   display: grid;
@@ -557,20 +555,20 @@ main #service .service-container .service-outer {
        column-gap: 1rem;
 }
 @media (min-width: 768px) {
-  main #service .service-container .service-outer {
+  #top #service .service-container .service-outer {
     max-width: 740px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: none;
   }
 }
-main #service .service-container .service-outer .service-block {
+#top #service .service-container .service-outer .service-block {
   width: 100%;
   text-align: center;
 }
-main #service .service-container .service-outer .service-block .top-logo-img {
+#top #service .service-container .service-outer .service-block .top-logo-img {
   width: 100px;
 }
-main #service .service-container .service-outer .service-block p {
+#top #service .service-container .service-outer .service-block p {
   font-size: 1rem;
 }
 
@@ -579,40 +577,43 @@ main #service .service-container .service-outer .service-block p {
 =============================================== */
 #plus {
   background: #DAE8C0;
+  /* ========事業所方針======= */
+  /* ========1日のスケジュール======= */
+  /* ========ご利用の流れ======= */
 }
-#plus .plus-container {
+#plus #plus-top .plus-container {
   margin: 0 auto;
   padding-bottom: 12px;
   width: 100%;
 }
 @media (min-width: 376px) {
-  #plus .plus-container {
+  #plus #plus-top .plus-container {
     max-width: 500px;
   }
 }
 @media (min-width: 500px) {
-  #plus .plus-container {
+  #plus #plus-top .plus-container {
     max-width: 600px;
   }
 }
 @media (min-width: 785px) {
-  #plus .plus-container {
+  #plus #plus-top .plus-container {
     max-width: 1000px;
   }
 }
-#plus .plus-container .plus-frame {
+#plus #plus-top .plus-container .plus-frame {
   margin: 0 auto;
   margin-bottom: 100px;
   width: calc(100% - 24px);
   position: relative;
 }
-#plus .plus-container .plus-frame img {
+#plus #plus-top .plus-container .plus-frame img {
   display: block;
   margin: 0 auto;
   width: 100%;
   height: auto;
 }
-#plus .plus-container .plus-frame .cc-plus {
+#plus #plus-top .plus-container .plus-frame .cc-plus {
   padding: 12px 28px;
   position: absolute;
   top: 96%;
@@ -624,57 +625,53 @@ main #service .service-container .service-outer .service-block p {
   border-radius: 24px;
   background: #85D136;
 }
-#plus .plus-container .plus-frame .cc-plus p {
+#plus #plus-top .plus-container .plus-frame .cc-plus p {
   font-size: 1.125em;
   color: #fff;
 }
 @media (min-width: 600px) {
-  #plus .plus-container .plus-2nd {
+  #plus #plus-top .plus-container .plus-2nd {
     padding-top: 0;
   }
 }
-
-/* ========事業所方針======= */
-#policy {
+#plus #policy {
   background: #F8E2CF;
 }
-#policy .policy-container {
+#plus #policy .policy-container {
   padding: 12px 0 20px;
 }
-#policy .policy-container .policy-outer {
+#plus #policy .policy-container .policy-outer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-#policy .policy-container .policy-outer .policy-brock {
+#plus #policy .policy-container .policy-outer .policy-brock {
   max-width: 240px;
   height: auto;
 }
-
-/* ========1日のスケジュール======= */
-#schedule {
+#plus #schedule {
   background: #F8E7ED;
 }
-#schedule .timeline-container {
+#plus #schedule .timeline-container {
   margin: 0 auto;
   padding: 12px 0 20px;
   max-width: 600px;
 }
-#schedule .timeline-container .timeline {
+#plus #schedule .timeline-container .timeline {
   margin-left: 50px;
   padding-top: 20px;
   position: relative;
   border-left: 2px solid #ED83A6;
 }
-#schedule .timeline-container .timeline .timeline-brock {
+#plus #schedule .timeline-container .timeline .timeline-brock {
   margin-bottom: 40px;
   padding-left: 30px;
   position: relative;
   display: flex;
   flex-direction: column;
 }
-#schedule .timeline-container .timeline .timeline-brock::before {
+#plus #schedule .timeline-container .timeline .timeline-brock::before {
   content: "";
   position: absolute;
   left: -21px;
@@ -684,22 +681,22 @@ main #service .service-container .service-outer .service-block p {
   background-size: contain;
   border-radius: 50%;
 }
-#schedule .timeline-container .timeline .timeline-brock:nth-child(1)::before {
+#plus #schedule .timeline-container .timeline .timeline-brock:nth-child(1)::before {
   background-image: url("../images/icon/9000.svg");
 }
-#schedule .timeline-container .timeline .timeline-brock:nth-child(2)::before {
+#plus #schedule .timeline-container .timeline .timeline-brock:nth-child(2)::before {
   background-image: url("../images/icon/1000.svg");
 }
-#schedule .timeline-container .timeline .timeline-brock:nth-child(3)::before {
+#plus #schedule .timeline-container .timeline .timeline-brock:nth-child(3)::before {
   background-image: url("../images/icon/1200.svg");
 }
-#schedule .timeline-container .timeline .timeline-brock:nth-child(4)::before {
+#plus #schedule .timeline-container .timeline .timeline-brock:nth-child(4)::before {
   background-image: url("../images/icon/1300.svg");
 }
-#schedule .timeline-container .timeline .timeline-brock:nth-child(5)::before {
+#plus #schedule .timeline-container .timeline .timeline-brock:nth-child(5)::before {
   background-image: url("../images/icon/1500.svg");
 }
-#schedule .timeline-container .timeline .timeline-brock .time {
+#plus #schedule .timeline-container .timeline .timeline-brock .time {
   padding-bottom: 2px;
   font-size: 1.5rem;
   letter-spacing: 1px;
@@ -707,40 +704,38 @@ main #service .service-container .service-outer .service-block p {
   width: -moz-fit-content;
   width: fit-content;
 }
-#schedule .timeline-container .timeline .timeline-brock img {
+#plus #schedule .timeline-container .timeline .timeline-brock img {
   margin: 0 auto;
   display: block;
   padding-top: 8px;
   max-width: 240px;
   height: auto;
 }
-#schedule .timeline-container .timeline .timeline-brock .timeline-text {
+#plus #schedule .timeline-container .timeline .timeline-brock .timeline-text {
   padding: 12px 20px 4px;
   line-height: 1.5;
 }
-
-/* ========ご利用の流れ======= */
-#flow {
+#plus #flow {
   background: #D3E5F4;
 }
-#flow .flow-outer {
+#plus #flow .flow-outer {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   gap: 12px;
 }
-#flow .flow-outer .flow-brock {
+#plus #flow .flow-outer .flow-brock {
   display: flex;
   align-items: center;
   position: relative;
 }
-#flow .flow-outer .flow-brock .step-icon {
+#plus #flow .flow-outer .flow-brock .step-icon {
   width: 80px;
   height: 80px;
   border-radius: 50%;
   z-index: 2;
 }
-#flow .flow-outer .flow-brock .flow-card {
+#plus #flow .flow-outer .flow-brock .flow-card {
   background: #fff;
   border-radius: 24px;
   padding: 20px 20px 20px 50px;
