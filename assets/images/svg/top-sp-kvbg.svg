@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="375" height="320" viewBox="0 0 375 320">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="長方形_725" data-name="長方形 725" width="375" height="43" transform="translate(0 0.284)" fill="#d3e5f4" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <rect id="長方形_726" data-name="長方形 726" width="375" height="34" transform="translate(0 0)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="top-sp-kvbg" transform="translate(0 -158.284)">
+    <g id="マスクグループ_8" data-name="マスクグループ 8" transform="translate(0 158)" clip-path="url(#clip-path)">
+      <path id="パス_1051" data-name="パス 1051" d="M2597,7805.487c28.932,23.83,41.352,31.406,80.965,31.431s53.463-30.632,109.25-31.431,58.453,31.574,105.588,31.431,79.3-31.431,79.3-31.431v385.871s-44.1-30.219-79.3-30.219-62.389,30.266-105.588,30.219-71.535-30.219-109.25-30.219-64.428,12.884-80.965,30.219C2596.65,8165.777,2596.672,7807.074,2597,7805.487Z" transform="translate(-2597.1 -7798.242)" fill="#d3e5f4"/>
+    </g>
+    <g id="マスクグループ_9" data-name="マスクグループ 9" transform="translate(0 444.284)" clip-path="url(#clip-path-2)">
+      <path id="パス_1050" data-name="パス 1050" d="M2597,7805.487c28.932,23.83,41.352,31.406,80.965,31.431s53.463-30.632,109.25-31.431,58.453,31.574,105.588,31.431,79.3-31.431,79.3-31.431v385.871s-44.1-30.219-79.3-30.219-62.389,30.266-105.588,30.219-71.535-30.219-109.25-30.219-64.428,12.884-80.965,30.219C2596.65,8165.777,2596.672,7807.074,2597,7805.487Z" transform="translate(-2596.746 -8157.236)" fill="#d3e5f4"/>
+    </g>
+    <rect id="長方形_727" data-name="長方形 727" width="375" height="244" transform="translate(0 201.284)" fill="#d3e5f4"/>
+  </g>
+</svg>

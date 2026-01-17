@@ -4,367 +4,503 @@
 =============================================== */
 
 #top {
-    padding-top: 1rem;
-    background: $bg-main;
+  padding-top: 1rem;
+  background: $bg-main;
+
+  #bg-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: auto;
+
+    .bg-img {
+      position: absolute;
+      top: ;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("../images/svg/top-sp-kvbg.svg");
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: 100% auto;
+      z-index: 1;
+
+      @media (min-width: 500px) {
+        background-image: url("../images/svg/top-pc-kvbg.svg");
+        background-position: center center;
+        background-size: contain;
+        top: -4vw;
+      }
+    }
 
     #kv {
+      margin: 0 auto;
+      width: 100%;
+      position: relative;
+      z-index: 2;
+
+      @media (min-width: 376px) {
+        max-width: 500px;
+      }
+
+      @media (min-width: 500px) {
+        max-width: 700px;
+      }
+
+      @media (min-width: 785px) {
+        max-width: 1000px;
+      }
+
+      .kv-container {
         margin: 0 auto;
-        width: 100%;
-        position: relative;
+        max-width: 1200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-        @media (min-width:376px) {
-            max-width: 500px;
-        }
+        z-index: 3;
 
-        @media (min-width:500px) {
-            max-width: 700px;
-        }
+        .kv-photo {
+          position: relative; //吹き出しの基準
 
-        @media (min-width:785px) {
-            max-width: 1000px;
-        }
+          margin: 0 auto;
+          width: 100%;
+          height: auto;
 
-
-        .kv-container {
+          img {
+            display: block;
             margin: 0 auto;
-            max-width: 1200px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            width: calc(100% - 24px);
+            height: auto;
 
-            .kv-frame {
-                margin: 0 auto;
-                width: calc(100% - 24px);
-
-                img {
-                    display: block;
-                    margin: 0 auto;
-                    width: 90%;
-                    height: auto;
-                }
+            @media (min-width: 500px) {
+              width: calc(100% - 48px);
             }
-
-            // .kv-frame
-
-            .catch_copy-outer {
-                padding: 0 2px 24px;
-                position: absolute;
-                top: 180px;
-                width: 100%;
-                height: 200px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                gap: 1rem;
-                
-
-                .catch_copy {
-                    background: $btn-cc;
-                    border-radius: 50px;
-                    width: fit-content;
-                    display: inline-block;
-                    box-shadow: 2px 3px 0 0 $shadow;
-
-                    p {
-                        padding: 4px 1.5rem;
-                        font-size: 1rem;
-                        line-height: 1.4rem;
-                    }
-
-                    &:nth-child(odd) {
-                        align-self: flex-start;
-                    }
-
-                    &:nth-child(even) {
-                        align-self: flex-end;
-                    }
-                }
-
-                // catch_copy
+            @media (min-width: 600px) {
+              width: calc(100% - 64px);
             }
-
-            // .catch_copy-outer
-
-            .kv-inner {
-                margin: 200px 0 40px;
-                text-align: center;
-                font-size: 1.375rem;
-                
-                span {
-                    color: $text-sub;
-                    font-size: 1.375rem;
-                }
-                
-                @media (min-width:420px) {
-                    margin: 190px 0 40px;
-                }
-                
-                @media (min-width:500px) {
-                    margin: 170px 0 40px;
-                }
-        
-                @media (min-width:785px) {
-                    max-width: 1000px;
-                }
-
+            @media (min-width: 786px) {
+              width: calc(100% - 96px);
             }
-            // kv-inner
+          }
 
+          .photo-sp {
+            @media (min-width: 500px) {
+              display: none;
+            }
+          }
+          .photo-pc {
+            @media (max-width: 500px) {
+              display: none;
+            }
+            @media (min-width: 500px) {
+              display: block;
+            }
+          }
         }
 
-        // .kv-container
+        // .kv-photo
 
-        /* ========二人ペアイラスト======= */
+        .catch_copy-outer {
+          position: absolute;
+          top: 82%;
+          left: 0;
+          width: 100%;
+          height: fit-content;
 
-        &::before,
-        &::after {
-            content: "";
-            position: absolute;
-            bottom: -22%;
+          display: flex;
+          flex-direction: column;
+          gap: 3vw;
+
+          pointer-events: none;
+          z-index: 4;
+
+          @media (min-width: 600px) {
+            height: fit-content;
+          }
+          @media (min-width: 786px) {
+            gap: 1.5vw;
+          }
+          @media (min-width: 1024px) {
+            gap: 1vw;
+          }
+
+          .catch_copy {
+            position: relative;
+            padding: 0.4em 1em;
+            font-size: 4vw;
+            line-height: 1.4;
+
+            background: $btn-cc;
+            border-radius: 50px;
+            box-shadow: 4px 4px 0 0 $shadow;
+
+            width: fit-content;
+            white-space: nowrap;
+            pointer-events: auto;
+
+            @media (min-width: 600px) {
+              margin-left: 12px;
+              font-size: 1rem;
+            }
+            @media (min-width: 786px) {
+              margin-left: 24px;
+              font-size: 1.1rem;
+            }
+            @media (min-width: 1024px) {
+              margin-left: 48px;
+              font-size: 1.2rem;
+            }
+
+            &:nth-child(1) {
+              align-self: flex-start;
+            }
+            &:nth-child(2) {
+              align-self: flex-end;
+              margin-right: 1vw;
+
+              @media (min-width: 600px) {
+                align-self: flex-start;
+              }
+            }
+
+            &:nth-child(3) {
+              align-self: flex-start;
+            }
+
+            br {
+              display: block;
+              @media (min-width: 600px) {
+                display: none;
+              }
+            }
+          }
+
+          // catch_copy
         }
 
-        &::before {
-            background-image: url(../images/top_pouple01.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-            left: 2%;
-            width: 120px;
-            height: 100px;
+        // .catch_copy-outer
 
-            @media (min-width:500px) {
-                width: 140px;
-                height: 120px;
+        .kv-inner {
+          position: relative;
+
+          margin-top: 45vw;
+          padding-bottom: 4vw;
+          width: 100%;
+
+          text-align: center;
+          font-size: 4.5vw;
+          line-height: 1.3;
+
+          @media (min-width: 600px) {
+            margin-top: 16vw;
+            font-size: 1.6rem;
+          }
+          @media (min-width: 786px) {
+            margin-top: 16vw;
+            font-size: 1.8rem;
+          }
+          @media (min-width: 1024px) {
+            margin-top: 140px;
+            font-size: 2rem;
+            padding-bottom: 1vw;
+          }
+
+          span {
+            color: $text-sub;
+            font-size: 4.5vw;
+
+            @media (min-width: 500px) {
+              font-size: 1.6rem;
             }
-
-            @media (min-width:670px) {
-                width: 160px;
-                height: 140px;
-                bottom: -20%;
+            @media (min-width: 786px) {
+              font-size: 1.8rem;
             }
-
-            @media (min-width:768px) {
-                width: 180px;
-                height: 140px;
-                bottom: -19%;
+            @media (min-width: 1024px) {
+              font-size: 2rem;
             }
-
+          }
         }
 
-        &::after {
-            background-image: url(../images/top_pouple02.png);
-            background-repeat: no-repeat;
-            background-size: contain;
-            right: 0;
-            width: 120px;
-            height: 100px;
+        // kv-inner
+      }
 
-            @media (min-width:500px) {
-                width: 140px;
-                height: 110px;
-            }
-
-            @media (min-width:670px) {
-                width: 160px;
-                height: 130px;
-                bottom: -20%;
-            }
-
-            @media (min-width:768px) {
-                width: 180px;
-                height: 130px;
-                bottom: -19%;
-            }
-
-        }
-
-
+      // .kv-container
     }
 
     // #kv
 
+    /* ========二人ペアイラスト======= */
 
+    .cc-img {
+      position: relative;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 660px;
+      z-index: 4;
 
-    /* ========topのお知らせ======= */
+      @media (min-width: 600px) {
+        max-width: 540px;
+      }
+      @media (min-width: 786px) {
+        max-width: 600px;
+      }
+      @media (min-width: 1024px) {
+        max-width: 800px;
+      }
 
-    #news {
-        margin: 0 auto;
-        padding-bottom: 40px;
-        padding-top: 16px;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        top: -6vw;
+      }
 
-        background: var(--color-yellow);
+      &::before {
+        background-image: url(../images/top_pouple01.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        left: 2%;
+        width: 120px;
+        height: 100px;
 
-        .news-container {
-            width: 100%;
-            padding: 0 3rem;
-            margin-top: 20px;
-
-            .news-outer {
-                margin: 0 auto 32px;
-                width: 100%;
-                display: flex;
-                justify-content: center;
-                flex-wrap: wrap;
-                gap: 2rem;
-
-                @media (min-width:500px) {
-                    gap: 2.5rem;
-                }
-                @media (min-width:785px) {
-                    gap: 3rem;
-                }
-                @media (min-width:880px) {
-                    gap: 4rem;
-                }
-
-                a {
-                    display: block;
-                    width: 160px;
-
-                    @media (max-width:350px) {
-                        &:nth-child(n+3) {
-                            display: none;
-                        }
-                    }
-
-                    @media (min-width:350px) and (max-width: 670px) {
-                        &:nth-child(n+3) {
-                            display: none;
-                        }
-                    }
-                    @media (min-width:671px) and (max-width: 880px) {
-                        &:nth-child(4) {
-                            display: none !important;
-                        }
-                    }
-                    
-                    .news-brock {
-                        width: 100%;
-                        max-width: 220px;
-                        
-                        @media (min-width:376px) {
-                            // 
-                        }
-
-
-
-                        .date {
-                            display: flex;
-                            flex-wrap: wrap;
-                            justify-content: space-between;
-                            align-items: center;
-                            margin: 4px;
-
-                            @media (min-width:420px) {
-                                margin-top: 8px;
-                            }
-
-                            span {
-                                font-size: 0.875rem;
-                                letter-spacing: 2px;
-                            }
-
-                            p {
-                                padding: 0 10px;
-                                display: inline-block;
-                                font-size: 0.875rem;
-                                color: white;
-                                background: $orange-2nd;
-                                border-radius: 4px;
-                            }
-
-                        }
-
-                        // .date
-                        .news-title {
-                            overflow: hidden;
-                            height: 2.2em;
-                            font-size: 1rem;
-                            line-height: 1.2;
-                            display: -webkit-box;
-                            -webkit-box-orient: vertical;
-                            -webkit-line-clamp: 2;
-                        }
-
-                        .news-text {
-                            margin-top: 8px;
-                            font-size: 0.875rem;
-                        }
-                    }
-
-                    // .news-brock
-                }
-
-                // a
-
-            }
-
-            // .news-outer
-
+        @media (min-width: 500px) {
+          width: 140px;
+          height: 120px;
+          top: -6vw;
         }
 
-        // .news-container
-
-
-    }
-
-    // #news
-
-
-    /* ========topの事業内容======= */
-
-    #service {
-        margin: 0 auto;
-        padding-bottom: 40px;
-        background: $green;
-
-        .service-container {
-            width: 100%;
-            padding: 0 1rem;
-            margin: 0 auto;
-
-            .service-outer {
-                margin: 20px auto 0;
-                max-width: 440px;
-                display: grid;
-                grid-template-rows: 1fr 1fr;
-                grid-template-columns: 1fr 1fr;
-                row-gap: 1rem;
-                column-gap: 1rem;
-
-                @media (min-width:768px) {
-                    max-width: 740px;
-                    grid-template-columns: 1fr 1fr 1fr 1fr;
-                    grid-template-rows: none;
-
-                }
-
-                .service-block {
-                    width: 100%;
-                    text-align: center;
-
-                    .top-logo-img {
-                        width: 100px;
-                    }
-
-                    p {
-                        font-size: 1rem;
-                    }
-                }
-
-                // .service-block
-            }
-
-            // .service-outer
-
+        @media (min-width: 600px) {
+          width: 160px;
+          height: 140px;
+          top: -4vw;
         }
 
-        // .service-container
+        @media (min-width: 768px) {
+          width: 180px;
+          height: 140px;
+          top: -4vw;
+        }
+        @media (min-width: 1024px) {
+          width: 200px;
+          height: 180px;
+          top: -8vw;
+        }
+      }
+
+      &::after {
+        background-image: url(../images/top_pouple02.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        right: 0;
+        width: 120px;
+        height: 100px;
+
+        @media (min-width: 500px) {
+          width: 140px;
+          height: 110px;
+          top: -6vw;
+        }
+
+        @media (min-width: 600px) {
+          width: 160px;
+          height: 130px;
+          top: -4vw;
+        }
+
+        @media (min-width: 768px) {
+          width: 180px;
+          height: 150px;
+          top: -4vw;
+        }
+        @media (min-width: 1024px) {
+          width: 200px;
+          height: 170px;
+          top: -8vw;
+        }
+      }
+    }
+    // cc-img
+  }
+
+  // #bg-container
+
+  /* ========topのお知らせ======= */
+
+  #news {
+    margin: 0 auto;
+    padding-bottom: 40px;
+    padding-top: 16px;
+
+    background: var(--color-yellow);
+
+    .news-container {
+      width: 100%;
+      padding: 0 3rem;
+      margin-top: 20px;
+
+      .news-outer {
+        margin: 0 auto 32px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        gap: 2rem;
+
+        @media (min-width: 500px) {
+          gap: 4rem;
+        }
+
+        @media (min-width: 786px) {
+          gap: 3rem;
+        }
+
+        @media (min-width: 1024px) {
+          gap: 4rem;
+        }
+
+        a {
+          display: block;
+          width: 160px;
+
+          @media (max-width: 350px) {
+            &:nth-child(n + 3) {
+              display: none;
+            }
+          }
+
+          @media (min-width: 350px) and (max-width: 785px) {
+            &:nth-child(n + 3) {
+              display: none;
+            }
+          }
+
+          @media (min-width: 786px) and (max-width: 1024px) {
+            &:nth-child(4) {
+              display: none !important;
+            }
+          }
+
+          .news-brock {
+            width: 100%;
+            max-width: 220px;
+
+            @media (min-width: 376px) {
+              //
+            }
+
+            .date {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: space-between;
+              align-items: center;
+              margin: 4px;
+
+              @media (min-width: 420px) {
+                margin-top: 8px;
+              }
+
+              span {
+                font-size: 0.875rem;
+                letter-spacing: 2px;
+              }
+
+              p {
+                padding: 0 10px;
+                display: inline-block;
+                font-size: 0.875rem;
+                color: white;
+                background: $orange-2nd;
+                border-radius: 4px;
+              }
+            }
+
+            // .date
+
+            .news-title {
+              overflow: hidden;
+              height: 2.2em;
+              font-size: 1rem;
+              line-height: 1.2;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 2;
+            }
+
+            .news-text {
+              overflow: hidden;
+              height: 3em;
+              margin-top: 8px;
+              font-size: 0.875rem;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 2;
+            }
+          }
+
+          // .news-brock
+        }
+
+        // a
+      }
+
+      // .news-outer
     }
 
-    // #service
+    // .news-container
+  }
 
+  // #news
 
+  /* ========topの事業内容======= */
 
+  #service {
+    margin: 0 auto;
+    padding-bottom: 40px;
+    background: $green;
+
+    .service-container {
+      width: 100%;
+      padding: 0 1rem;
+      margin: 0 auto;
+
+      .service-outer {
+        margin: 20px auto 0;
+        max-width: 440px;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        row-gap: 1rem;
+        column-gap: 1rem;
+
+        @media (min-width: 768px) {
+          max-width: 740px;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          grid-template-rows: none;
+        }
+
+        .service-block {
+          width: 100%;
+          text-align: center;
+
+          .top-logo-img {
+            width: 100px;
+          }
+
+          p {
+            font-size: 1rem;
+          }
+        }
+
+        // .service-block
+      }
+
+      // .service-outer
+    }
+
+    // .service-container
+  }
+
+  // #service
 }
 
 // main

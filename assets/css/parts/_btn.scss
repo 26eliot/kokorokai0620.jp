@@ -11,6 +11,7 @@
     margin: 0 auto;
     width: 160px;
     height: 40px;
+
     display: flex;
     align-items: center;
     justify-content: start;
@@ -19,12 +20,13 @@
     text-align: center;
     border-radius: 50px;
     border: 1px solid $text;
-    box-shadow: 2px 3px 0 0 $text;
+
+    box-shadow: 4px 4px 0 0 $text;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 
       &:hover {
-        box-shadow: none;
+        box-shadow: 0 0 0 0 $text;
         transform: translate(4px, 4px);
-        transition: transform 0.2s ease-in-out;
       }
 
       &:active {
