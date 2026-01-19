@@ -184,24 +184,65 @@ button {
   margin-bottom: 0;
 }
 
+/* ========ウェーブライン======= */
+.wave-top {
+  width: 100%;
+  height: 40px;
+  -webkit-mask-image: url("../images/svg/wave-top-sp.svg");
+  mask-image: url("../images/svg/wave-top-sp.svg");
+  -webkit-mask-repeat: repeat-x;
+  mask-repeat: repeat-x;
+  -webkit-mask-position: center top;
+  mask-position: center top;
+  -webkit-mask-size: 786px auto;
+  mask-size: 786px auto;
+}
+@media (min-width: 600px) {
+  .wave-top {
+    height: 100px;
+    -webkit-mask-size: 1920px auto;
+    mask-size: 1920px auto;
+  }
+}
+
+.wave-bottom {
+  width: 100%;
+  height: 40px;
+  -webkit-mask-image: url("../images/svg/wave-under-sp.svg");
+  mask-image: url("../images/svg/wave-under-sp.svg");
+  -webkit-mask-repeat: repeat-x;
+  mask-repeat: repeat-x;
+  -webkit-mask-position: center bottom;
+  mask-position: center bottom;
+  -webkit-mask-size: 786px auto;
+  mask-size: 786px auto;
+}
+@media (min-width: 600px) {
+  .wave-bottom {
+    height: 100px;
+    -webkit-mask-size: 1920px auto;
+    mask-size: 1920px auto;
+  }
+}
+
 .wave-yellow {
-  fill: var(--color-yellow);
+  background-color: var(--color-yellow);
 }
 
 .wave-green {
-  fill: var(--color-green);
+  background-color: var(--color-green);
 }
 
 .wave-pink {
-  fill: var(--color-pink);
+  background-color: var(--color-pink);
 }
 
 .wave-orange {
-  fill: var(--color-orange);
+  background-color: var(--color-orange);
 }
 
 .wave-blue {
-  fill: var(--color-blue);
+  background-color: var(--color-blue);
 }
 
 /* ========事業内容見出し======= */
@@ -343,7 +384,7 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../images/svg/top-sp-kvbg.svg");
+  background-image: url("../images/svg/wave-kv-sp.svg");
   background-repeat: no-repeat;
   background-position: center top;
   background-size: 100% auto;
@@ -351,35 +392,43 @@ button {
 }
 @media (min-width: 420px) {
   #top #bg-container .bg-img {
-    top: 10vw;
+    top: 8vw;
   }
 }
 @media (min-width: 500px) {
   #top #bg-container .bg-img {
-    top: 13vw;
+    top: 4vw;
   }
 }
 @media (min-width: 600px) {
   #top #bg-container .bg-img {
-    background-image: url("../images/svg/top-pc-kvbg.svg");
-    top: 34vw;
+    background-image: url("../images/svg/wave-kv-pc.svg");
+    background-position: center top;
+    background-size: 1200px auto;
+    top: 13vw;
+  }
+}
+@media (min-width: 700px) {
+  #top #bg-container .bg-img {
+    top: 20vw;
   }
 }
 @media (min-width: 786px) {
   #top #bg-container .bg-img {
-    top: 32vw;
+    background-size: 1400px auto;
+    top: 18vw;
   }
 }
 @media (min-width: 1024px) {
   #top #bg-container .bg-img {
-    top: 310px;
-    background-size: 100% auto;
+    background-size: 1800px auto;
+    top: 160px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1240px) {
   #top #bg-container .bg-img {
-    top: 140px;
-    background-size: 1800px auto;
+    top: 200px;
+    background-repeat: repeat-x;
   }
 }
 #top #bg-container #kv {
@@ -549,6 +598,11 @@ button {
   text-align: center;
   font-size: 4.5vw;
   line-height: 1.3;
+}
+@media (min-width: 500px) {
+  #top #bg-container #kv .kv-container .kv-inner {
+    margin-top: 40vw;
+  }
 }
 @media (min-width: 600px) {
   #top #bg-container #kv .kv-container .kv-inner {
@@ -841,7 +895,7 @@ button {
 #top #service .service-container {
   width: 100%;
   padding: 0 1rem;
-  margin: 0 auto;
+  margin: 60px auto 0;
 }
 #top #service .service-container .service-outer {
   margin: 20px auto 0;
@@ -1061,6 +1115,9 @@ button {
   border-radius: 24px;
   padding: 20px 20px 20px 50px;
   box-shadow: 2px 4px 4px 0 #cbcbcb;
+}
+#plus #address {
+  background: #F7EDA0;
 }
 
 /* ===============================================
@@ -1307,12 +1364,13 @@ nav ul .sub-menu span {
 =============================================== */
 #footer_top {
   position: relative;
+  width: 100%;
   background: var(--color-pink);
   padding-bottom: 20px;
   /* ========topに戻るボタン======= */
 }
 #footer_top .footer_top-container {
-  margin: 0 auto;
+  margin: 60px auto 0;
   max-width: 600px;
 }
 #footer_top .footer_top-container .bg-img {
@@ -1420,7 +1478,7 @@ nav ul .sub-menu span {
     font-size: 1.175rem;
   }
 }
-#footer_top #back-page-top {
+#footer_top #back-btn-containar #back-page-top {
   position: fixed;
   bottom: 30px;
   right: 20px;
@@ -1430,23 +1488,23 @@ nav ul .sub-menu span {
   transition: opacity 0.3s, visibility 0.3s;
   /* フッターに到達した時にJSでこのクラスをつける */
 }
-#footer_top #back-page-top.is-show {
+#footer_top #back-btn-containar #back-page-top.is-show {
   opacity: 1;
   visibility: visible;
 }
-#footer_top #back-page-top.is-stopped {
+#footer_top #back-btn-containar #back-page-top.is-stopped {
   position: absolute;
   bottom: 20px; /* #footer_topの最下部からの距離 */
   top: auto;
   right: 20px;
 }
-#footer_top #back-page-top .btn-top {
+#footer_top #back-btn-containar #back-page-top .btn-top {
   display: block;
   position: relative;
   margin-left: auto;
-  margin-right: 1rem;
-  width: 60px;
-  height: 60px;
+  margin-bottom: -8px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   background: #B44906;
   border: 1px solid #FEFBF3;
@@ -1454,7 +1512,21 @@ nav ul .sub-menu span {
   cursor: pointer;
   transition: background-color 0.2s ease, border-color 0.2s ease;
 }
-#footer_top #back-page-top .btn-top::before {
+@media (min-width: 600px) {
+  #footer_top #back-btn-containar #back-page-top .btn-top {
+    margin-right: 1rem;
+    margin-bottom: -1rem;
+    width: 60px;
+    height: 60px;
+  }
+}
+@media (min-width: 1240px) {
+  #footer_top #back-btn-containar #back-page-top .btn-top {
+    margin-right: 1rem;
+    margin-bottom: -2rem;
+  }
+}
+#footer_top #back-btn-containar #back-page-top .btn-top::before {
   content: "";
   display: block;
   position: absolute;
@@ -1468,15 +1540,15 @@ nav ul .sub-menu span {
   transform: translate(-50%, -25%) rotate(45deg);
   transition: border-color 0.2s ease;
 }
-#footer_top #back-page-top .btn-top:hover {
+#footer_top #back-btn-containar #back-page-top .btn-top:hover {
   transform: translateY(4px);
   transition: transform 0.2s ease;
 }
-#footer_top #back-page-top .btn-top:active {
+#footer_top #back-btn-containar #back-page-top .btn-top:active {
   background: #FEFBF3;
   border-color: #B44906;
 }
-#footer_top #back-page-top .btn-top:active::before {
+#footer_top #back-btn-containar #back-page-top .btn-top:active::before {
   border-color: #B44906;
 }
 
@@ -1485,6 +1557,7 @@ nav ul .sub-menu span {
 =============================================== */
 footer {
   margin: 0 auto;
+  padding-top: 40px;
   min-width: 350px;
   background: #F8F8EC;
   background-image: url(../images/footer_sp.png);

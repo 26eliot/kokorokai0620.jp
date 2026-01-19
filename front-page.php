@@ -1,4 +1,5 @@
-<?php get_header();  ?>
+<?php get_template_part('parts/header'); ?>
+
 <!-- MAIN -->
 <main id="top">
 
@@ -42,17 +43,9 @@
         <div class="cc-img"></div>
 
     </section>
-    <!-- bg-container -->
 
-    <div class="svg-outer">
 
-        <svg class="bg-top" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 376 43" preserveAspectRatio="none">
-            <path class="wave-yellow"
-                d="M2597,7805.487c29.009,23.894,41.462,31.49,81.181,31.515s53.606-30.714,109.541-31.515,58.609,31.658,105.87,31.515,79.507-31.515,79.507-31.515v386.9s-44.219-30.3-79.507-30.3-62.556,30.347-105.87,30.3-71.726-30.3-109.541-30.3-64.6,12.919-81.181,30.3C2596.65,8166.738,2596.672,7807.078,2597,7805.487Z"
-                transform="translate(-2597.101 -7798.223)">
-        </svg>
-    </div>
-
+<div class="wave-top wave-yellow"></div>
     <section id="news">
 
 
@@ -153,17 +146,11 @@
 
     </section>
     <!-- news -->
-
-
+    
+    
     <section id="service">
+        <div class="wave-bottom wave-yellow"></div>
 
-        <svg class="bg-under wave-yellow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 84.628">
-            <g transform="translate(-0.699 -691.113)">
-                <path
-                    d="M.147,768.712c57.094-47.018,81.6-61.975,159.769-62.034s105.509,60.44,215.584,62.034c84.746-.905,131.547-61.365,208.361-62.034,112.338-1.929,156.482,62.034,156.482,62.034V7.26S653.315,66.893,583.861,66.893,460.738,7.162,375.5,7.26,234.329,66.893,159.916,66.893,32.778,41.465.147,7.26C-.542,57.722-.5,765.563.147,768.712Z"
-                    transform="translate(0.355 -7.26)" />
-            </g>
-        </svg>
 
         <div class="service-container">
 
@@ -181,7 +168,7 @@
                 </div>
 
                 <div class="service-block">
-                    <a href="plus.html">
+                <a href="<?php echo esc_url( home_url('/survice/plus01/') ); ?>">
                         <img class="top-logo-img" src="<?php echo get_theme_file_uri(); ?>/assets/images/logo_plus.png" alt="就労継続支援B型ぷらす">
                         <p class="service-title">就労継続支援B型<br>
                             ぷらす</p>
@@ -214,14 +201,7 @@
     <!-- service -->
 
     <section id="footer_top">
-        <svg class="bg-under wave-green" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 84.628">
-            <g transform="translate(-0.699 -691.113)">
-                <path
-                    d="M.147,768.712c57.094-47.018,81.6-61.975,159.769-62.034s105.509,60.44,215.584,62.034c84.746-.905,131.547-61.365,208.361-62.034,112.338-1.929,156.482,62.034,156.482,62.034V7.26S653.315,66.893,583.861,66.893,460.738,7.162,375.5,7.26,234.329,66.893,159.916,66.893,32.778,41.465.147,7.26C-.542,57.722-.5,765.563.147,768.712Z"
-                    transform="translate(0.355 -7.26)" />
-            </g>
-            </g>
-        </svg>
+    <div class="wave-bottom wave-green"></div>
 
 
         <div class="footer_top-container">
@@ -262,6 +242,7 @@
 
 
         <!-- topに戻るボタン -->
+        <section id="back-btn-containar">
         <a href="<?php echo home_url('/'); ?>">
             <div id="back-page-top">
                 <button class="btn-top">
@@ -270,22 +251,17 @@
                 </button>
             </div>
         </a>
-
+</section>
 
     </section>
     <!-- footer_top -->
 
 
-    <svg class=" bg-under wave-pink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 84.628">
-        <g transform="translate(-0.699 -691.113)">
-            <path
-                d="M.147,768.712c57.094-47.018,81.6-61.975,159.769-62.034s105.509,60.44,215.584,62.034c84.746-.905,131.547-61.365,208.361-62.034,112.338-1.929,156.482,62.034,156.482,62.034V7.26S653.315,66.893,583.861,66.893,460.738,7.162,375.5,7.26,234.329,66.893,159.916,66.893,32.778,41.465.147,7.26C-.542,57.722-.5,765.563.147,768.712Z"
-                transform="translate(0.355 -7.26)" />
-        </g>
-    </svg>
+    <div class="wave-bottom wave-pink"></div>
+
 
 </main>
 <!-- MAIN -->
 
 
-<?php get_footer(); ?>
+<?php get_template_part('parts/footer'); ?>

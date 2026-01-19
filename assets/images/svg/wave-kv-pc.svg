@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="500" viewBox="0 0 1800 500">
+  <g id="wave-kv-pc" transform="translate(-947.793 504)">
+    <path id="wave-top" d="M0,56q75,0,150-28Q300-28,450,28q75,28,150,28T750,28Q900-28,1050,28,1125,56,1200,56t150-28q150-56,300,0Q1725,56,1800,56v44H0Z" transform="translate(947.793 -504)" fill="#d3e5f4"/>
+    <path id="wave-uneder" d="M0,44q75,0,150,28Q300,128,450,72q75-28,150-28T750,72Q900,128,1050,72,1125,44,1200,44t150,28q150,56,300,0Q1725,44,1800,44V0H0Z" transform="translate(947.793 -104)" fill="#d3e5f4"/>
+    <rect id="長方形_735" data-name="長方形 735" width="1800" height="300" transform="translate(947.793 -404)" fill="#d3e5f4"/>
+  </g>
+</svg>

@@ -1,4 +1,6 @@
-<?php get_header();  ?>
+
+<?php get_template_part('parts/header'); ?>
+
 
 <!-- MAIN -->
   <main id="plus">
@@ -11,7 +13,7 @@
 
 
         <div class="plus-frame">
-          <img src="assets/images/plus_mv.png" alt="" class="ぷらすmainvisual">
+          <img src="<?php echo get_theme_file_uri(); ?>/assets/images/plus_mv.png" alt="" class="ぷらすmainvisual">
 
           <div class="cc-plus">
             <p>あなたが持っている力を引き出し、<br>
@@ -24,7 +26,7 @@
         <div class="cc-2nd-outer">
 
           <div class="cc-2nd-inner ">
-            <img src="assets/images/plus_img01.png" alt="plus_img01">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/plus_img01.png" alt="plus_img01">
             <div class="cc-2nd-text">
               <p>まずは規則正しい毎日を送ることからスタートしたい。<br>
                 少しずつ、ゆっくり自分のペースで仕事を続けたい。</p>
@@ -35,7 +37,7 @@
           </div>
 
           <div class="cc-2nd-inner">
-            <img src="assets/images/plus_img02.png" alt="plus_img02">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/plus_img02.png" alt="plus_img02">
             <div class="cc-2nd-text">
               <p class="plus-2nd">人それぞれ思いや悩みは違うもの。<br>
                 あなたの希望に合わせて、
@@ -53,17 +55,9 @@
 
     <section id="policy">
 
+    <div class="wave-bottom wave-green"></div>
 
-      <div class="svg-outer">
 
-        <svg class="bg-under wave-green" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 84.628">
-          <g transform="translate(-0.699 -691.113)">
-            <path class=""
-              d="M.147,768.712c57.094-47.018,81.6-61.975,159.769-62.034s105.509,60.44,215.584,62.034c84.746-.905,131.547-61.365,208.361-62.034,112.338-1.929,156.482,62.034,156.482,62.034V7.26S653.315,66.893,583.861,66.893,460.738,7.162,375.5,7.26,234.329,66.893,159.916,66.893,32.778,41.465.147,7.26C-.542,57.722-.5,765.563.147,768.712Z"
-              transform="translate(0.355 -7.26)" />
-          </g>
-        </svg>
-      </div>
 
       <h3>事業所方針</h3>
 
@@ -73,19 +67,19 @@
         <div class="policy-outer">
 
           <div class="policy-brock">
-            <img src="assets/images/plus_policy01.png" alt="労働の機会を提供し、少しでも高い工賃を得られるようにしていきます。">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/plus_policy01.png" alt="労働の機会を提供し、少しでも高い工賃を得られるようにしていきます。">
           </div>
           <div class="policy-brock">
-            <img src="assets/images/plus_policy02.png" alt="作業はもちろん、自立的な生活が実現できるように支援していきます。">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/plus_policy02.png" alt="作業はもちろん、自立的な生活が実現できるように支援していきます。">
           </div>
           <div class="policy-brock">
-            <img src="assets/images/plus_policy03.png" alt="自分の持っている強みを生かす視点で活動に取り組んでいきます。">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/plus_policy03.png" alt="自分の持っている強みを生かす視点で活動に取り組んでいきます。">
           </div>
           <div class="policy-brock">
-            <img src="assets/images/plus_policy04.png" alt="plよりステップアップを目指していく自信や弾みをつけられるように支援していきます。">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/plus_policy04.png" alt="plよりステップアップを目指していく自信や弾みをつけられるように支援していきます。">
           </div>
           <div class="policy-brock">
-            <img src="assets/images/plus_policy05.png" alt="事業所間、他機関と連携し地域の活用できる資源の一つになれるよう目指していきます。">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/plus_policy05.png" alt="事業所間、他機関と連携し地域の活用できる資源の一つになれるよう目指していきます。">
           </div>
 
 
@@ -102,13 +96,7 @@
 
     <section id="schedule">
 
-      <svg class="bg-under wave-orange" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 84.628">
-        <g transform="translate(-0.699 -691.113)">
-          <path class=""
-            d="M.147,768.712c57.094-47.018,81.6-61.975,159.769-62.034s105.509,60.44,215.584,62.034c84.746-.905,131.547-61.365,208.361-62.034,112.338-1.929,156.482,62.034,156.482,62.034V7.26S653.315,66.893,583.861,66.893,460.738,7.162,375.5,7.26,234.329,66.893,159.916,66.893,32.778,41.465.147,7.26C-.542,57.722-.5,765.563.147,768.712Z"
-            transform="translate(0.355 -7.26)" />
-        </g>
-      </svg>
+    <div class="wave-bottom wave-orange"></div>
 
       <div class="timeline-container">
 
@@ -126,7 +114,7 @@
               <span>※送迎の方は9：00から順次お迎え</span>
             </div>
 
-            <img src="assets/images/plus_tl01.png" alt="plus_tl01">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/plus_tl01.png" alt="plus_tl01">
 
           </li>
 
@@ -138,7 +126,7 @@
             <div class="timeline-text">
               <p>作業開始。途中10分の休憩を挟みながらの軽作業が中心ですが、ポスティングや施設外就労もあります。</p>
             </div>
-            <img src="assets/images/plus_tl02.png" alt="plus_tl02">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/plus_tl02.png" alt="plus_tl02">
 
           </li>
 
@@ -151,7 +139,7 @@
               <p>お昼休憩を１時間取ります。ご持参いただいたお弁当、または仕出し弁当（１食¥350）でランチタイムです。</p>
             </div>
 
-            <img src="assets/images/plus_tl03.png" alt="plus_tl03">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/plus_tl03.png" alt="plus_tl03">
 
           </li>
 
@@ -163,7 +151,7 @@
               <p>午後作業開始。途中10分の休憩を挟みながら作業を再開します。</p>
             </div>
 
-            <img src="assets/images/plus_tl04.png" alt="plus_tl04">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/plus_tl04.png" alt="plus_tl04">
 
           </li>
 
@@ -176,7 +164,7 @@
               <span>※送迎の方は15:00から順次送り</span>
             </div>
 
-            <img src="assets/images/plus_tl05.png" alt="plus_tl05">
+            <img src="<?php echo get_theme_file_uri(); ?>/assets/images/plus_tl05.png" alt="plus_tl05">
 
           </li>
 
@@ -196,14 +184,8 @@
 
     <section id="flow">
 
-      <svg class="bg-under wave-pink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 84.628">
-        <g transform="translate(-0.699 -691.113)">
-          <path class=""
-            d="M.147,768.712c57.094-47.018,81.6-61.975,159.769-62.034s105.509,60.44,215.584,62.034c84.746-.905,131.547-61.365,208.361-62.034,112.338-1.929,156.482,62.034,156.482,62.034V7.26S653.315,66.893,583.861,66.893,460.738,7.162,375.5,7.26,234.329,66.893,159.916,66.893,32.778,41.465.147,7.26C-.542,57.722-.5,765.563.147,768.712Z"
-            transform="translate(0.355 -7.26)" />
-        </g>
+    <div class="wave-bottom wave-pink"></div>
 
-      </svg>
 
       <div class="flow-container">
 
@@ -214,7 +196,7 @@
           <div class="flow-brock">
 
             <span class="step-icon">
-              <img src="assets/images/icon/step1.svg" alt="step1">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/icon/step1.svg" alt="step1">
             </span>
 
             <div class="flow-card step1">
@@ -227,7 +209,7 @@
           <div class="flow-brock">
 
             <span class="step-icon">
-              <img src="assets/images/icon/step2.svg" alt="step2">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/icon/step2.svg" alt="step2">
             </span>
 
             <div class="flow-card step2">
@@ -241,7 +223,7 @@
           <div class="flow-brock">
 
             <span class="step-icon">
-              <img src="assets/images/icon/step3.svg" alt="step3">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/icon/step3.svg" alt="step3">
             </span>
 
             <div class="flow-card step3">
@@ -254,7 +236,7 @@
           <div class="flow-brock">
 
             <span class="step-icon">
-              <img src="assets/images/icon/step4.svg" alt="step4">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/icon/step4.svg" alt="step4">
             </span>
 
             <div class="flow-card step4">
@@ -320,7 +302,7 @@
 
           <div class="flow-contact-inner">
             <div class="tell">
-              <img src="assets/images/icon/tellphone.svg" alt="tell-icon">
+              <img src="<?php echo get_theme_file_uri(); ?>/assets/images/icon/tellphone.svg" alt="tell-icon">
               <p>049-290-3966</p>
             </div>
             <p>平日 9:00~17:00まで</p>
@@ -339,15 +321,9 @@
     <!-- flow -->
 
 
+<section id="address">
+<div class="wave-bottom wave-blue"></div>
 
-    <section class="address plus-address">
-      <svg class="bg-under wave-blue" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 84.628">
-        <g transform="translate(-0.699 -691.113)">
-          <path class=""
-            d="M.147,768.712c57.094-47.018,81.6-61.975,159.769-62.034s105.509,60.44,215.584,62.034c84.746-.905,131.547-61.365,208.361-62.034,112.338-1.929,156.482,62.034,156.482,62.034V7.26S653.315,66.893,583.861,66.893,460.738,7.162,375.5,7.26,234.329,66.893,159.916,66.893,32.778,41.465.147,7.26C-.542,57.722-.5,765.563.147,768.712Z"
-            transform="translate(0.355 -7.26)" />
-        </g>
-      </svg>
 
       <div class="address-container">
 
@@ -449,62 +425,57 @@
     <!-- address -->
 
     <section id="service">
+        <div class="wave-bottom wave-yellow"></div>
 
-      <svg class="bg-under wave-yellow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 84.628">
-        <g transform="translate(-0.699 -691.113)">
-          <path class=""
-            d="M.147,768.712c57.094-47.018,81.6-61.975,159.769-62.034s105.509,60.44,215.584,62.034c84.746-.905,131.547-61.365,208.361-62.034,112.338-1.929,156.482,62.034,156.482,62.034V7.26S653.315,66.893,583.861,66.893,460.738,7.162,375.5,7.26,234.329,66.893,159.916,66.893,32.778,41.465.147,7.26C-.542,57.722-.5,765.563.147,768.712Z"
-            transform="translate(0.355 -7.26)" />
-        </g>
-      </svg>
 
-      <div class="service-container">
+        <div class="service-container">
 
-        <h2>事業内容</h2>
+            <h2 class="h2-02">事業内容</h2>
 
-        <div class="service-outer">
+            <div class=" service-outer">
 
-          <div class="service-block">
-            <a href="ponte.html">
-              <img class="top-logo-img" src="assets/images/logo_ponte.png" alt="就労継続支援B型
+                <div class="service-block">
+                    <a href="ponte.html">
+                        <img class="top-logo-img" src="<?php echo get_theme_file_uri(); ?>/assets/images/logo_ponte.png" alt="就労継続支援B型
                         ぽんて">
-              <p>就労継続支援B型<br>
-                ぽんて</p>
-            </a>
-          </div>
+                        <p>就労継続支援B型<br>
+                            ぽんて</p>
+                    </a>
+                </div>
 
-          <div class="service-block">
-            <a href="plus.html">
-              <img class="top-logo-img" src="assets/images/logo_plus.png" alt="就労継続支援B型ぷらす">
-              <p class="service-title">就労継続支援B型<br>
-                ぷらす</p>
-            </a>
-          </div>
+                <div class="service-block">
+                <a href="<?php echo esc_url( home_url('/survice/plus01/') ); ?>">
+                        <img class="top-logo-img" src="<?php echo get_theme_file_uri(); ?>/assets/images/logo_plus.png" alt="就労継続支援B型ぷらす">
+                        <p class="service-title">就労継続支援B型<br>
+                            ぷらす</p>
+                    </a>
+                </div>
 
-          <div class="service-block">
-            <a href="sakura.html">
-              <img class="top-logo-img" src="assets/images/logo_sakura.png" alt="地域活動支援センターさくら">
-              <p class="service-title">地域活動支援センター<br>
-                さくら</p>
-            </a>
-          </div>
+                <div class="service-block">
+                    <a href="sakura.html">
+                        <img class="top-logo-img" src="<?php echo get_theme_file_uri(); ?>/assets/images/logo_sakura.png" alt="地域活動支援センターさくら">
+                        <p class="service-title">地域活動支援センター<br>
+                            さくら</p>
+                    </a>
+                </div>
 
-          <div class="service-block">
-            <a href="PW.html">
-              <img class="top-logo-img" src="assets/images/logo_ponte.png" alt="相談支援ぽんて">
-              <p class="service-title">相談支援<br>
-                ぽんて</p>
-            </a>
-          </div>
+                <div class="service-block">
+                    <a href="PW.html">
+                        <img class="top-logo-img" src="<?php echo get_theme_file_uri(); ?>/assets/images/logo_ponte.png" alt="相談支援ぽんて">
+                        <p class="service-title">相談支援<br>
+                            ぽんて</p>
+                    </a>
+                </div>
+
+            </div>
+            <!-- service-outer -->
 
         </div>
-        <!-- service-outer -->
-
-      </div>
-      <!-- service-container -->
+        <!-- service-container -->
 
     </section>
     <!-- service -->
+
 
 
 
@@ -561,16 +532,10 @@
         </section>
         <!-- footer_top -->
 
-        
-        <svg class=" bg-under wave-pink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 740 84.628">
-      <g transform="translate(-0.699 -691.113)">
-        <path class=""
-          d="M.147,768.712c57.094-47.018,81.6-61.975,159.769-62.034s105.509,60.44,215.584,62.034c84.746-.905,131.547-61.365,208.361-62.034,112.338-1.929,156.482,62.034,156.482,62.034V7.26S653.315,66.893,583.861,66.893,460.738,7.162,375.5,7.26,234.329,66.893,159.916,66.893,32.778,41.465.147,7.26C-.542,57.722-.5,765.563.147,768.712Z"
-          transform="translate(0.355 -7.26)" />
-      </g>
-      </g>
-      </svg>
+        <div class="wave-bottom wave-green"></div>
+
   </main>
   <!-- MAIN -->
 
-  <?php get_footer(); ?>
+
+  <?php get_template_part('parts/footer'); ?>

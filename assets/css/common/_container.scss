@@ -17,25 +17,77 @@
   margin-bottom: 0;
 
 }
+  /* ========ウェーブライン======= */
+
+
+  .wave-top {
+    width: 100%;
+    height: 40px;
+    
+    -webkit-mask-image: url("../images/svg/wave-top-sp.svg");
+    mask-image: url("../images/svg/wave-top-sp.svg");
+    
+    -webkit-mask-repeat: repeat-x;
+    mask-repeat: repeat-x;
+    
+    -webkit-mask-position: center top;
+    mask-position: center top;
+    
+    -webkit-mask-size: 786px auto;
+    mask-size: 786px auto;
+    
+    @media (min-width: 600px) {
+      // background-image: url("../images/svg/wave-top-pc.svg");
+      height: 100px;
+      -webkit-mask-size: 1920px auto;
+      mask-size: 1920px auto;
+    }
+  }
+
+  .wave-bottom {
+    width: 100%;
+    height: 40px;
+    
+    -webkit-mask-image: url("../images/svg/wave-under-sp.svg");
+    mask-image: url("../images/svg/wave-under-sp.svg");
+    
+    -webkit-mask-repeat: repeat-x;
+    mask-repeat: repeat-x;
+    
+    -webkit-mask-position: center bottom;
+    mask-position: center bottom;
+    
+    -webkit-mask-size: 786px auto;
+    mask-size: 786px auto;
+
+    
+    @media (min-width: 600px) {
+      // background-image: url("../images/svg/wave-under-pc.svg");
+      height: 100px;
+      -webkit-mask-size: 1920px auto;
+      mask-size: 1920px auto;
+    }
+  }
+
 
 .wave-yellow {
-  fill: var(--color-yellow) ;
+  background-color: var(--color-yellow); 
 }
 
 .wave-green {
-  fill: var(--color-green) ;
+  background-color: var(--color-green); 
 }
 
 .wave-pink {
-  fill: var(--color-pink) ;
+  background-color: var(--color-pink); 
 }
 
 .wave-orange {
-  fill: var(--color-orange);
+  background-color: var(--color-orange); 
 }
 
 .wave-blue {
-  fill: var(--color-blue) ;
+  background-color: var(--color-blue); 
 }
 
 

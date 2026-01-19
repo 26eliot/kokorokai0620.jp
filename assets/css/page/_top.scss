@@ -17,32 +17,38 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-image: url("../images/svg/top-sp-kvbg.svg");
+      background-image: url("../images/svg/wave-kv-sp.svg");
       background-repeat: no-repeat;
       background-position: center top;
       background-size: 100% auto;
       z-index: 1;
 
       @media (min-width: 420px) {
-        top: 10vw;
+        top: 8vw;
       }
       @media (min-width: 500px) {
-        top: 13vw;
+        top: 4vw;
       }
       @media (min-width: 600px) {
-        background-image: url("../images/svg/top-pc-kvbg.svg");
-        top: 34vw;
+        background-image: url("../images/svg/wave-kv-pc.svg");
+        background-position:  center top;
+        background-size: 1200px auto;
+        top: 13vw;
+      }
+      @media (min-width: 700px) {
+        top: 20vw;
       }
       @media (min-width: 786px) {
-        top: 32vw;
+        background-size: 1400px auto;
+        top: 18vw;
       }
       @media (min-width: 1024px) {
-        top: 310px;
-        background-size: 100% auto;
-      }
-      @media (min-width: 1200px) {
-        top: 140px;
         background-size: 1800px auto;
+        top: 160px;
+      }
+      @media (min-width: 1240px) {
+        top: 200px;
+        background-repeat: repeat-x;
       }
     }
 
@@ -69,7 +75,6 @@
 
       .kv-container {
         margin: 0 auto;
-        // max-width: 1200px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -208,6 +213,9 @@
           text-align: center;
           font-size: 4.5vw;
           line-height: 1.3;
+          @media (min-width: 500px) {
+            margin-top: 40vw;
+          }
 
           @media (min-width: 600px) {
             margin-top: 22vw;
@@ -507,7 +515,7 @@
     .service-container {
       width: 100%;
       padding: 0 1rem;
-      margin: 0 auto;
+      margin: 60px auto 0;
 
       .service-outer {
         margin: 20px auto 0;

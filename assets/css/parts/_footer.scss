@@ -5,12 +5,13 @@
 =============================================== */
 #footer_top {
   position: relative;
+  width: 100%;
 
   background: var(--color-pink);
   padding-bottom: 20px;
 
   .footer_top-container {
-    margin: 0 auto;
+    margin: 60px auto 0;
     max-width: 600px;
 
     .bg-img {
@@ -113,7 +114,16 @@
 
   // .footer_top-container
 
+
   /* ========topに戻るボタン======= */
+
+  #back-btn-containar {
+    // max-width: 1240px;  
+    // margin: 0 auto;    
+    // position: relative;
+    // height: 1px;
+    // pointer-events: none;
+
 
   #back-page-top {
     position: fixed;
@@ -144,14 +154,25 @@
       display: block;
       position: relative;
       margin-left: auto;
-      margin-right: 1rem;
-      width: 60px;
-      height: 60px;
+      margin-bottom: -8px;
+      width: 44px;
+      height: 44px;
       border-radius: 50%;
       background: $text;
       border: 1px solid $btn-cc;
       z-index: 2;
       cursor: pointer;
+      
+      @media (min-width: 600px) {
+        margin-right: 1rem;
+        margin-bottom: -1rem;
+        width: 60px;
+        height: 60px;
+      }
+      @media (min-width: 1240px) {
+        margin-right: 1rem;
+        margin-bottom: -2rem;
+      }
 
       transition:
         background-color 0.2s ease,
@@ -191,6 +212,11 @@
   }
 
   // #back-page-top
+
+}
+// #back-btn-outer
+
+
 }
 
 // #footer-top
@@ -201,6 +227,7 @@
 
 footer {
   margin: 0 auto;
+  padding-top: 40px;
   min-width: 350px;
   background: $bg-main;
 
