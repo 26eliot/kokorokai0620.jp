@@ -5,7 +5,7 @@
         <div class="footer__company">
             <h1>
                 <a href="<?= site_url(); ?>/">
-                    <img class="header-logo" src="<?php echo get_theme_file_uri(); ?>/assets/images/logo_h1_sp.png" alt="一般社団法人こころ会">
+                    <img class="header-logo" src="<?php echo get_theme_file_uri(); ?>/assets/images/logo.svg" alt="一般社団法人こころ会">
                 </a>
             </h1>
 

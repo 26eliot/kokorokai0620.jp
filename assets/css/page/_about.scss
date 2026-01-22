@@ -19,6 +19,18 @@
 
         &__company{
             background: $blue;
+            h2{
+                &::before{
+                    background: $pink-3rd;
+
+                }
+            }
+
+            dl{
+                max-width: 960px;
+                width: 100%;
+                margin-inline: auto;
+            }
         }
     }
 }

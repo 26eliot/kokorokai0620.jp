@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css" />
     <link rel="stylesheet" href="<?php echo get_theme_file_uri(); ?>/assets/css/style.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
     <?php wp_head(); ?> 
     
 </head>
@@ -23,7 +27,7 @@
 
             <h1>
                 <a href="<?= site_url(); ?>">
-                    <img class="header-logo" src="<?php echo get_theme_file_uri(); ?>/assets/images/logo_h1_sp.png" alt="一般社団法人こころ会">
+                    <img class="header-logo" src="<?php echo get_theme_file_uri(); ?>/assets/images/logo.svg" alt="一般社団法人こころ会">
                 </a>
             </h1>
 
