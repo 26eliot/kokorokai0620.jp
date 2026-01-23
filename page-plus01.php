@@ -6,7 +6,7 @@
 
     <div class="bg-img"></div>
 
-    <h4 class="survice-head">就労継続支援B型 ぷらす</h4>
+    <h4 class="service-head">就労継続支援B型 ぷらす</h4>
 
     <section id="plus-top">
 
@@ -447,7 +447,7 @@
         </div>
 
         <div class="service-block">
-          <a href="<?php echo esc_url(home_url('/survice/plus01/')); ?>">
+          <a href="<?php echo esc_url(home_url('/service/plus01/')); ?>">
             <img class="top-logo-img" src="<?php echo get_theme_file_uri(); ?>/assets/images/logo_plus.png" alt="就労継続支援B型ぷらす">
             <p class="service-title">就労継続支援B型<br>
               ぷらす</p>
