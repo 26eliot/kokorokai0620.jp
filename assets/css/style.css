@@ -1147,7 +1147,7 @@ button {
   margin: 0 auto;
   padding: 20px 0;
   width: 100%;
-  max-width: 520px;
+  /* ========お気軽にご相談ください======= */
 }
 @media (min-width: 1024px) {
   #plus #flow .flow-container {
@@ -1157,6 +1157,7 @@ button {
 #plus #flow .flow-container .flow-outer {
   margin: 20px auto 30px;
   padding: 0 20px 0 30px;
+  max-width: 60%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -1164,6 +1165,7 @@ button {
 }
 @media (min-width: 1024px) {
   #plus #flow .flow-container .flow-outer {
+    max-width: 100%;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
@@ -1251,7 +1253,6 @@ button {
 #plus #flow .flow-container .flow-2nd-outer {
   margin: 40px auto 0;
   padding: 12px 16px;
-  max-width: calc(100% - 12px);
   position: relative;
   background: #E4EFF8;
   border-radius: 4px;
@@ -1275,48 +1276,68 @@ button {
   background-repeat: no-repeat;
   z-index: 5;
 }
+#plus #flow .flow-container .flow-2nd-outer ul {
+  margin: 0 auto;
+  max-width: 780px;
+}
 #plus #flow .flow-container .flow-2nd-outer ul li {
   padding: 20px 0;
   border-bottom: 1px dashed #93C7ED;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1024px) {
+  #plus #flow .flow-container .flow-2nd-outer ul li {
+    flex-direction: row;
+  }
 }
 #plus #flow .flow-container .flow-2nd-outer ul li:last-child {
   border-bottom: none;
 }
 #plus #flow .flow-container .flow-2nd-outer ul li .flow-2nd-title {
-  text-align: center;
+  padding-bottom: 8px;
+  min-width: 160px;
   font-size: 1.125rem;
   font-weight: bold;
-  padding-bottom: 8px;
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  #plus #flow .flow-container .flow-2nd-outer ul li .flow-2nd-title {
+    text-align: left;
+  }
 }
 #plus #flow .flow-container .flow-2nd-outer ul li p {
   font-size: 1rem;
   line-height: 1.6;
 }
-#plus #flow .flow-container .flow-2nd-outer ul li span {
+#plus #flow .flow-container .flow-2nd-outer ul li p span {
   display: block;
   font-size: 0.875rem;
   margin-top: 4px;
 }
 #plus #flow .flow-container .flow-contact {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 440px;
-}
-#plus #flow .flow-container .flow-contact .flow-contact-outer {
   margin: 20px;
   background: #fff;
   border-radius: 24px;
-  padding: 20px;
+  padding: 20px 32px;
   box-shadow: 3px 4px 0 0 #93C7ED;
+}
+#plus #flow .flow-container .flow-contact h4 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding-bottom: 8px;
+  text-align: center;
+}
+#plus #flow .flow-container .flow-contact .flow-contact-outer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-#plus #flow .flow-container .flow-contact .flow-contact-outer h4 {
-  font-size: 1.25rem;
-  font-weight: bold;
-  padding-bottom: 8px;
+@media (min-width: 786px) {
+  #plus #flow .flow-container .flow-contact .flow-contact-outer {
+    flex-direction: row;
+  }
 }
 #plus #flow .flow-container .flow-contact .flow-contact-outer .disc {
   font-size: 1rem;
@@ -1325,21 +1346,25 @@ button {
 #plus #flow .flow-container .flow-contact .flow-contact-outer .flow-contact-inner {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 #plus #flow .flow-container .flow-contact .flow-contact-outer .flow-contact-inner .tell {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 4px;
 }
 #plus #flow .flow-container .flow-contact .flow-contact-outer .flow-contact-inner .tell .tell-number {
-  font-size: 1.375rem;
+  font-size: 1.6rem;
+  padding-bottom: 4px;
 }
 #plus #flow .flow-container .flow-contact .flow-contact-outer .flow-contact-inner span {
   display: block;
   font-size: 0.875rem;
-  padding-bottom: 8px;
+  padding-bottom: 10px;
+}
+#plus #flow .flow-container .flow-contact .flow-contact-outer .btn {
+  width: 240px;
 }
 #plus #address {
   background: #F7EDA0;

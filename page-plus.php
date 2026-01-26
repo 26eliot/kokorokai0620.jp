@@ -259,9 +259,9 @@
           <li>
             <div class="flow-2nd-title">対象となる方</div>
             <p>療育手帳か精神保健福祉手帳または
-              自立支援医療受給者証をお持ちの方が対象です。</p>
+              自立支援医療受給者証をお持ちの方が対象です。
             <span>※身体障害者手帳の方は要相談</span>
-
+</p>
           </li>
 
           <li>
@@ -299,12 +299,11 @@
       <!-- flow-2nd-outer -->
 
       <div class="flow-contact">
-
+        
+        <h4>お気軽にご相談ください</h4>
         <div class="flow-contact-outer">
-
-          <h4>お気軽にご相談ください</h4>
+.
           <p class="disc">見学・体験に関する事、ご利用に関する事など、お気軽にご相談ください。</p>
-
           <div class="flow-contact-inner">
             <div class="tell">
               <img src="<?php echo get_theme_file_uri(); ?>/assets/images/icon/tellphone.svg" alt="tell-icon">
