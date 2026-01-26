@@ -24,9 +24,9 @@
           </div>
         </div>
 
-        <div class="cc-2nd-outer">
+        <div class="cc-2nd-outer div-green">
 
-          <div class="cc-2nd-inner ">
+          <div class="cc-2nd-inner">
             <img src="<?php echo get_theme_file_uri(); ?>/assets/images/plus_img01.png" alt="plus_img01">
             <div class="cc-2nd-text">
               <p>まずは規則正しい毎日を送ることからスタートしたい。<br>
@@ -40,7 +40,7 @@
           <div class="cc-2nd-inner">
             <img src="<?php echo get_theme_file_uri(); ?>/assets/images/plus_img02.png" alt="plus_img02">
             <div class="cc-2nd-text">
-              <p class="plus-2nd">人それぞれ思いや悩みは違うもの。<br>
+              <p class="plus-2nd-inner">人それぞれ思いや悩みは違うもの。<br>
                 あなたの希望に合わせて、
                 私たちがしっかりサポートします。</p>
             </div>
@@ -175,10 +175,6 @@
       </ul>
       <!-- timeline -->
 
-
-    </div>
-    <!-- timeline-contens -->
-
     </div>
     <!-- timeline-container -->
 
@@ -301,9 +297,8 @@
       <div class="flow-contact">
         
         <h4>お気軽にご相談ください</h4>
-        <div class="flow-contact-outer">
-.
-          <p class="disc">見学・体験に関する事、ご利用に関する事など、お気軽にご相談ください。</p>
+        <p class="disc">見学・体験に関する事、ご利用に関する事など、お気軽にご相談ください。</p>
+        <!-- <div class="flow-contact-outer"> -->
           <div class="flow-contact-inner">
             <div class="tell">
               <img src="<?php echo get_theme_file_uri(); ?>/assets/images/icon/tellphone.svg" alt="tell-icon">
@@ -319,7 +314,7 @@
           </a>
 
 
-        </div>
+        <!-- </div> -->
         <!-- flow-contact-outer -->
 
 
@@ -383,7 +378,7 @@
         <div class="access-brock">
           <div class="access-tool">
             <div class="access-01">【電車】</div>
-            <p class="access-02">東武東上線ふじみ野駅より徒歩30分</p>
+            <p class="access-02">・東武東上線ふじみ野駅より徒歩30分</p>
           </div>
         </div>
 
@@ -391,7 +386,7 @@
 
           <div class="access-tool">
             <div class="access-01">【バス】</div>
-            <p class="access-02">ふじみ野駅西口より東武バス利用の場合 :</p>
+            <p class="access-02">・ふじみ野駅西口より東武バス利用の場合 :</p>
 
 
 
@@ -402,7 +397,7 @@
           </div>
 
           <div class="access-tool">
-            <p class="access-02">上福岡駅西口より東武バス利用の場合：</p>
+            <p class="access-02">・上福岡駅西口より東武バス利用の場合：</p>
 
             <div class="access-03">
               <p>(上福04)<span>「ふじみ野市大井支所」</span>下車 徒歩10分
@@ -414,7 +409,7 @@
 
           <div class="access-tool">
             <p class="access-02">
-              ふじみん号ご利用の場合：</p>
+              ・ふじみん号ご利用の場合：</p>
 
               <div class="access-03"">
               <p>CまたはEコース<span>「大井支所」</span>下車 

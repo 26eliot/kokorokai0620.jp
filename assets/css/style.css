@@ -137,7 +137,7 @@ h2::before {
 }
 
 h3 {
-  padding-top: 1rem;
+  padding-top: 2rem;
   font-size: 1.5rem;
   text-align: center;
 }
@@ -262,10 +262,21 @@ button {
   border-radius: 50px;
 }
 
-/* ========事業内容2ndコピー======= */
+/* ========事業内容2ndキャッチコピー======= */
 .cc-2nd-outer {
   margin: 0 auto;
-  padding-top: 20px;
+  padding: 20px 0;
+  width: 100%;
+}
+@media (min-width: 600px) {
+  .cc-2nd-outer {
+    padding: 0 24px 0;
+  }
+}
+@media (min-width: 786px) {
+  .cc-2nd-outer {
+    width: 100%;
+  }
 }
 .cc-2nd-outer .cc-2nd-inner {
   padding-bottom: 16px;
@@ -276,12 +287,13 @@ button {
 }
 @media (min-width: 600px) {
   .cc-2nd-outer .cc-2nd-inner {
-    flex-direction: row;
+    padding-top: 0;
+    flex-direction: row-reverse;
   }
 }
 @media (min-width: 600px) {
   .cc-2nd-outer .cc-2nd-inner:nth-child(even) {
-    flex-direction: row-reverse;
+    flex-direction: row;
   }
 }
 .cc-2nd-outer .cc-2nd-inner img {
@@ -290,7 +302,7 @@ button {
   height: auto;
 }
 .cc-2nd-outer .cc-2nd-inner .cc-2nd-text p {
-  padding: 0 54px;
+  padding: 0 28px;
   align-self: start;
 }
 @media (min-width: 600px) {
@@ -987,54 +999,51 @@ button {
   font-size: 1.5rem;
   border-radius: 24px;
 }
+#plus #plus-top {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1920/600;
+  background-image: url(../images/svg/wave-top-service.svg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center 32vw;
+}
+@media (min-width: 786px) {
+  #plus #plus-top {
+    background-position: center 300px;
+  }
+}
 #plus #plus-top .plus-container {
   margin: 0 auto;
-  padding-bottom: 12px;
   width: 100%;
-}
-@media (min-width: 376px) {
-  #plus #plus-top .plus-container {
-    max-width: 500px;
-  }
-}
-@media (min-width: 500px) {
-  #plus #plus-top .plus-container {
-    max-width: 600px;
-  }
-}
-@media (min-width: 785px) {
-  #plus #plus-top .plus-container {
-    max-width: 1000px;
-  }
 }
 #plus #plus-top .plus-container .plus-frame {
   margin: 0 auto;
-  margin-bottom: 100px;
+  max-width: 1200px;
   width: calc(100% - 24px);
-  position: relative;
 }
 #plus #plus-top .plus-container .plus-frame img {
   display: block;
   margin: 0 auto;
   width: 100%;
   height: auto;
+  z-index: 2;
 }
 #plus #plus-top .plus-container .plus-frame .cc-plus {
+  position: relative;
+  margin: -2% auto 0;
   padding: 12px 28px;
-  position: absolute;
-  top: 96%;
-  left: 50%;
-  transform: translateX(-50%);
   white-space: nowrap;
   width: -moz-fit-content;
   width: fit-content;
   border-radius: 24px;
   background: #85D136;
+  z-index: 3;
 }
-@media (min-width: 500px) {
+@media (min-width: 600px) {
   #plus #plus-top .plus-container .plus-frame .cc-plus {
-    top: 92%;
-    left: 20%;
+    margin-top: -4%;
+    margin-left: 2%;
     padding: 18px 28px;
   }
 }
@@ -1042,10 +1051,9 @@ button {
   font-size: 1.125em;
   color: #fff;
 }
-@media (min-width: 600px) {
-  #plus #plus-top .plus-container .plus-2nd {
-    padding-top: 0;
-  }
+#plus #plus-top .plus-container .div-green {
+  background: #DAE8C0;
+  width: 100%;
 }
 #plus #policy {
   background: #F8E2CF;
@@ -1076,12 +1084,18 @@ button {
 }
 #plus #schedule {
   background: #F8E7ED;
+  padding-bottom: 20px;
 }
 #plus #schedule .timeline-container {
   margin: 0 auto;
-  padding: 12px 0 20px;
+  padding: 0 20px;
   width: 100%;
   max-width: 600px;
+}
+@media (min-width: 1024px) {
+  #plus #schedule .timeline-container {
+    max-width: 800px;
+  }
 }
 #plus #schedule .timeline-container .timeline {
   margin-left: 50px;
@@ -1138,26 +1152,25 @@ button {
 }
 #plus #schedule .timeline-container .timeline .timeline-brock .timeline-text {
   padding: 12px 20px 4px;
-  line-height: 1.5;
+  line-height: 1.8;
+}
+#plus #schedule .timeline-container .timeline .timeline-brock .timeline-text p {
+  line-height: 1.6;
 }
 #plus #flow {
   background: #D3E5F4;
 }
 #plus #flow .flow-container {
   margin: 0 auto;
-  padding: 20px 0;
+  padding-bottom: 20px;
   width: 100%;
+  /* ========ご利用の流れ詳細======= */
   /* ========お気軽にご相談ください======= */
-}
-@media (min-width: 1024px) {
-  #plus #flow .flow-container {
-    max-width: 1100px;
-  }
 }
 #plus #flow .flow-container .flow-outer {
   margin: 20px auto 30px;
   padding: 0 20px 0 30px;
-  max-width: 60%;
+  max-width: 520px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -1165,7 +1178,7 @@ button {
 }
 @media (min-width: 1024px) {
   #plus #flow .flow-container .flow-outer {
-    max-width: 100%;
+    max-width: 1100px;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: center;
@@ -1211,6 +1224,7 @@ button {
   border-radius: 24px;
   padding: 20px 20px 20px 48px;
   box-shadow: 2px 4px 4px 0 #cbcbcb;
+  line-height: 1.8;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1251,16 +1265,17 @@ button {
   color: #93C7ED;
 }
 #plus #flow .flow-container .flow-2nd-outer {
-  margin: 40px auto 0;
+  margin: 40px 0;
   padding: 12px 16px;
+  width: auto;
   position: relative;
   background: #E4EFF8;
   border-radius: 4px;
-  box-shadow: 0 4px 10px #cbcbcb;
+  box-shadow: 0 4px 10px -4px #cbcbcb;
 }
 @media (min-width: 786px) {
   #plus #flow .flow-container .flow-2nd-outer {
-    margin: 0 auto;
+    margin: 40px auto 0;
     width: 100%;
   }
 }
@@ -1275,6 +1290,12 @@ button {
   background-size: contain;
   background-repeat: no-repeat;
   z-index: 5;
+}
+@media (min-width: 1024px) {
+  #plus #flow .flow-container .flow-2nd-outer::after {
+    left: 50%;
+    transform: translateX(480px);
+  }
 }
 #plus #flow .flow-container .flow-2nd-outer ul {
   margin: 0 auto;
@@ -1316,55 +1337,84 @@ button {
   margin-top: 4px;
 }
 #plus #flow .flow-container .flow-contact {
-  margin: 20px;
+  margin: 32px auto 20px;
+  max-width: 360px;
   background: #fff;
   border-radius: 24px;
   padding: 20px 32px;
   box-shadow: 3px 4px 0 0 #93C7ED;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 786px) {
+  #plus #flow .flow-container .flow-contact {
+    max-width: 780px;
+    padding: 28px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1;
+  }
 }
 #plus #flow .flow-container .flow-contact h4 {
   font-size: 1.25rem;
   font-weight: bold;
   padding-bottom: 8px;
-  text-align: center;
-}
-#plus #flow .flow-container .flow-contact .flow-contact-outer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 @media (min-width: 786px) {
-  #plus #flow .flow-container .flow-contact .flow-contact-outer {
-    flex-direction: row;
+  #plus #flow .flow-container .flow-contact h4 {
+    order: 2;
   }
 }
-#plus #flow .flow-container .flow-contact .flow-contact-outer .disc {
+#plus #flow .flow-container .flow-contact .disc {
   font-size: 1rem;
   padding-bottom: 8px;
 }
-#plus #flow .flow-container .flow-contact .flow-contact-outer .flow-contact-inner {
+@media (min-width: 786px) {
+  #plus #flow .flow-container .flow-contact .disc {
+    order: 1;
+    width: 100%;
+    padding-bottom: 12px;
+  }
+}
+#plus #flow .flow-container .flow-contact .flow-contact-inner {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#plus #flow .flow-container .flow-contact .flow-contact-outer .flow-contact-inner .tell {
+@media (min-width: 786px) {
+  #plus #flow .flow-container .flow-contact .flow-contact-inner {
+    order: 3;
+  }
+}
+#plus #flow .flow-container .flow-contact .flow-contact-inner .tell {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 4px;
 }
-#plus #flow .flow-container .flow-contact .flow-contact-outer .flow-contact-inner .tell .tell-number {
+#plus #flow .flow-container .flow-contact .flow-contact-inner .tell .tell-number {
   font-size: 1.6rem;
   padding-bottom: 4px;
 }
-#plus #flow .flow-container .flow-contact .flow-contact-outer .flow-contact-inner span {
+#plus #flow .flow-container .flow-contact .flow-contact-inner span {
   display: block;
   font-size: 0.875rem;
   padding-bottom: 10px;
 }
-#plus #flow .flow-container .flow-contact .flow-contact-outer .btn {
-  width: 240px;
+@media (min-width: 786px) {
+  #plus #flow .flow-container .flow-contact .btn {
+    order: 4;
+  }
+}
+#plus #flow .flow-container .flow-contact h4,
+#plus #flow .flow-container .flow-contact .flow-contact-inner,
+#plus #flow .flow-container .flow-contact .btn {
+  flex: 1;
+  text-align: center;
 }
 #plus #address {
   background: #F7EDA0;
@@ -1375,25 +1425,50 @@ button {
   width: 100%;
   max-width: 600px;
 }
+@media (min-width: 786px) {
+  #plus #address .address-container {
+    max-width: 780px;
+  }
+}
 #plus #address .address-container .address-outer {
   padding: 8px 20px;
   margin: 0 auto;
   width: 100%;
 }
+@media (min-width: 786px) {
+  #plus #address .address-container .address-outer {
+    max-width: 600px;
+  }
+}
 #plus #address .address-container .address-outer ul li {
   padding: 10px 0;
+  width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   border-bottom: 1px dashed #B44906;
 }
 #plus #address .address-container .address-outer ul li div {
   width: 100px;
+  flex-shrink: 0;
 }
-#plus #address .address-container .address-outer ul li p {
-  width: 250px;
+#plus #address .address-container .address-outer ul li .address-tell {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  gap: 2px;
+}
+@media (min-width: 786px) {
+  #plus #address .address-container .address-outer ul li .address-tell {
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
 }
 #plus #address .map {
   position: relative;
+  margin: 20px auto;
   width: 100%;
   padding-top: 56.25%; /* 16:9のアスペクト比 */
   height: 0;
@@ -1406,7 +1481,7 @@ button {
   height: 100%;
 }
 #plus #address .access {
-  padding: 8px 20px;
+  padding: 8px 0px;
 }
 #plus #address .access .access-title {
   font-size: 1.25rem;
@@ -1422,10 +1497,10 @@ button {
   padding: 4px 0;
 }
 #plus #address .access .access-brock .access-02 {
-  padding: 4px 0 4px 1rem;
+  padding: 4px 0 4px;
 }
 #plus #address .access .access-brock .access-03 {
-  padding: 0px 0 4px 1.75rem;
+  padding: 0px 0 4px 1rem;
 }
 #plus #address .access .access-brock .access-03 p {
   padding-top: 8px;
