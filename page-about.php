@@ -117,7 +117,6 @@
         $args = [
             "top-wave" => "blue",
             "background" => "yellow",
-            "service" => "yellow",
         ];
         get_template_part("parts/footer_top", null ,$args); 
     ?>

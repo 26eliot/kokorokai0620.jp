@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main id="contact">
+<main id="not-found">
     <?php 
         $args = [
             "top-wave" => "blue",

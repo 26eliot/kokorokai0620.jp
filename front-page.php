@@ -159,7 +159,7 @@
             <div class=" service-outer">
 
                 <div class="service-block">
-                <a href="<?php echo esc_url( home_url('/service/ponte01/') ); ?>">
+                <a href="<?php echo esc_url( home_url('/service/ponte/') ); ?>">
                         <img class="top-logo-img" src="<?php echo get_theme_file_uri(); ?>/assets/images/svg/logo.svg" alt="就労継続支援B型
                         ぽんて">
                         <p>就労継続支援B型<br>
@@ -168,7 +168,7 @@
                 </div>
 
                 <div class="service-block">
-                <a href="<?php echo esc_url( home_url('/service/plus01/') ); ?>">
+                <a href="<?php echo esc_url( home_url('/service/plus/') ); ?>">
                         <img class="top-logo-img" src="<?php echo get_theme_file_uri(); ?>/assets/images/svg/logo.svg" alt="就労継続支援B型ぷらす">
                         <p class="service-title">就労継続支援B型<br>
                             ぷらす</p>
@@ -176,7 +176,7 @@
                 </div>
 
                 <div class="service-block">
-                <a href="<?php echo esc_url( home_url('/service/sakura01/') ); ?>">
+                <a href="<?php echo esc_url( home_url('/service/sakura/') ); ?>">
                         <img class="top-logo-img" src="<?php echo get_theme_file_uri(); ?>/assets/images/svg/logo.svg" alt="地域活動支援センターさくら">
                         <p class="service-title">地域活動支援センター<br>
                             さくら</p>
@@ -184,7 +184,7 @@
                 </div>
 
                 <div class="service-block">
-                <a href="<?php echo esc_url( home_url('/service/ponte02/') ); ?>">
+                <a href="<?php echo esc_url( home_url('/service/ponte-pw/') ); ?>">
                         <img class="top-logo-img" src="<?php echo get_theme_file_uri(); ?>/assets/images/svg/logo.svg" alt="相談支援ぽんて">
                         <p class="service-title">相談支援<br>
                             ぽんて</p>

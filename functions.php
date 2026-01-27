@@ -144,39 +144,63 @@
 
 // 固定ページ追加
 
-
-function create_page_if_not_exists($slug, $title) {
+// 1. 関数を少し拡張：第3引数で親のIDを受け取れるようにします
+function create_page_if_not_exists($slug, $title, $parent_id = 0) {
+    // get_page_by_path は階層を考慮するので 'service/plus' の形式でチェック
     if (!get_page_by_path($slug)) {
-        wp_insert_post([
+        return wp_insert_post([
             'post_title'   => $title,
-            'post_name'    => $slug,
+            'post_name'    => basename($slug), // スラッグのみ抽出
             'post_status'  => 'publish',
             'post_type'    => 'page',
+            'post_parent'  => $parent_id,
         ]);
     }
+    // 既存ページがある場合はそのIDを返す
+    $page = get_page_by_path($slug);
+    return $page->ID;
 }
 
 function create_individual_pages() {
+    // 通常の固定ページ
     $pages = [
-        [
-            'slug'    => 'about',
-            'title'   => '会社概要',
-        ],
-        [
-            'slug'    => 'contact',
-            'title'   => 'お問い合わせ',
-        ],
-        [
-            'slug'    => 'privacy',
-            'title'   => 'プライバシーポリシー',
-        ],
+        ['slug' => 'about',   'title' => '会社概要'],
+        ['slug' => 'contact', 'title' => 'お問い合わせ'],
+        ['slug' => 'privacy', 'title' => 'プライバシーポリシー'],
     ];
 
     foreach ($pages as $page) {
         create_page_if_not_exists($page['slug'], $page['title']);
     }
+
+    // --- ここから親子ページの作成 ---
+    
+    // まずは親（service）を作成
+    $parent_id = create_page_if_not_exists('service', '事業内容');
+
+    // 親のIDを使って子（plus）を作成
+    if ($parent_id) {
+
+        create_page_if_not_exists('service/ponte', '就労支援B型　ぽんて', $parent_id);
+        create_page_if_not_exists('service/plus', '就労支援B型　ぷらす', $parent_id);
+        create_page_if_not_exists('service/sakura', '地域活動支援　さくら', $parent_id);
+        create_page_if_not_exists('service/ponte-pw', '相談支援　ぽんて', $parent_id);
+    }
 }
 add_action('after_setup_theme', 'create_individual_pages');
+
+// --- service だけを 404 に飛ばす設定 ---
+add_action('template_redirect', function() {
+    // service ページ本体（かつ子ページではない）の場合のみ 404
+    if (is_page('service')) {
+        global $wp_query;
+        $wp_query->set_404();
+        status_header(404);
+        nocache_headers();
+        include(get_query_template('404'));
+        die();
+    }
+});
 
 
 

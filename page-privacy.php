@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<main id="contact">
+<main id="privacy">
     <?php 
         $args = [
             "top-wave" => "blue",

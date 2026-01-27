@@ -1,13 +1,20 @@
 <?php get_header(); ?>
-<main id="contact">
+
+<!-- MAIN -->
+<main id="sakura">
+
+
+  
     <?php 
         $args = [
-            "top-wave" => "blue",
-            "background" => "yellow",
-            "no-wave" => true,
+            "top-wave" => "yellow",
+            "background" => "green",
+            "service" => true
         ];
         get_template_part("parts/footer_top", null ,$args); 
     ?>
 </main>
+<!-- MAIN -->
+
 
 <?php get_footer(); ?>

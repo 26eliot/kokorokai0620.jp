@@ -434,116 +434,19 @@
   </section>
   <!-- address -->
 
-  <section id=" service">
-                <div class="wave-bottom wave-yellow"></div>
 
-
-                <div class="service-container">
-
-                  <h2 class="h2-02">事業内容</h2>
-
-                  <div class=" service-outer">
-
-                    <div class="service-block">
-                      <a href="ponte.html">
-                        <img class="top-logo-img" src="<?php echo get_theme_file_uri(); ?>/assets/images/logo_ponte.png" alt="就労継続支援B型
-                        ぽんて">
-                        <p>就労継続支援B型<br>
-                          ぽんて</p>
-                      </a>
-                    </div>
-
-                    <div class="service-block">
-                      <a href="<?php echo esc_url(home_url('/service/plus01/')); ?>">
-                        <img class="top-logo-img" src="<?php echo get_theme_file_uri(); ?>/assets/images/logo_plus.png" alt="就労継続支援B型ぷらす">
-                        <p class="service-title">就労継続支援B型<br>
-                          ぷらす</p>
-                      </a>
-                    </div>
-
-                    <div class="service-block">
-                      <a href="sakura.html">
-                        <img class="top-logo-img" src="<?php echo get_theme_file_uri(); ?>/assets/images/logo_sakura.png" alt="地域活動支援センターさくら">
-                        <p class="service-title">地域活動支援センター<br>
-                          さくら</p>
-                      </a>
-                    </div>
-
-                    <div class="service-block">
-                      <a href="PW.html">
-                        <img class="top-logo-img" src="<?php echo get_theme_file_uri(); ?>/assets/images/logo_ponte.png" alt="相談支援ぽんて">
-                        <p class="service-title">相談支援<br>
-                          ぽんて</p>
-                      </a>
-                    </div>
-
-                  </div>
-                  <!-- service-outer -->
-
-                </div>
-                <!-- service-container -->
-
-  </section>
-  <!-- service -->
+  
+    <?php 
+        $args = [
+            "top-wave" => "yellow",
+            "background" => "green",
+            "service" => true
+        ];
+        get_template_part("parts/footer_top", null ,$args); 
+    ?>
 
 
 
-
-
-  <section id="footer_top">
-
-
-    <div class="footer_top-container">
-
-      <div class="bg-img">
-
-        <div class="footer_top-outer">
-
-          <h4>お気軽にお問い合わせください</h4>
-
-
-          <p>一般社団法人こころ会</p>
-
-          <div class="footer_top-inner">
-
-            <div class="footer_top-block">
-              <p>049-293-6729</p>
-              <span>平日 9:00〜17:00まで</span>
-            </div>
-
-            <a class="btn contact" href="contact.html">
-              <img class="mail-icon" src="assets/images/icon/mail.svg" alt="mail icon">
-              お問い合わせ
-              <span class="btn-circle"></span>
-            </a>
-
-          </div>
-          <!-- footer_top-inner -->
-
-        </div>
-        <!-- footer_top-outer -->
-
-      </div>
-      <!-- bg-img -->
-
-    </div>
-    <!-- footer_top-container -->
-
-
-    <!-- topに戻るボタン -->
-    <div id="back-page-top">
-      <button class="btn-top"">
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-
-
-        </section>
-        <!-- footer_top -->
-
-        <div class=" wave-bottom wave-green">
-    </div>
 
 </main>
 <!-- MAIN -->
