@@ -1,56 +1,54 @@
 <?php get_header();  ?>
 
 <!--  MAIN  -->
-<main id="plus">
-  <section id="bg-container  service">
+<main id="plus" class="service_page">
+  
+  <h4 class="service-head">就労継続支援B型 ぷらす</h4>
 
-    <div class="bg-img"></div>
+  <div class="bg-img wave-green"></div>
+  
+  <section id="plus-top">
 
-    <h4 class="service-head">就労継続支援B型 ぷらす</h4>
+    <div class="service-container">
 
-    <section id="plus-top">
+      <div class="mv-frame">
+        <img src="<?php echo  get_theme_file_uri();  ?>/assets/images/plus_mv.png" alt="" class="ぷらすmainvisual">
 
-      <div class="plus-container">
-
-
-        <div class="plus-frame">
-          <img src="<?php echo  get_theme_file_uri();  ?>/assets/images/plus_mv.png" alt="" class="ぷらすmainvisual">
-
-          <div class="cc-plus">
-            <p>あなたが持っている力を引き出し、<br>
-              あなたの人生にとっても、<br>
-              そして社会にとっても【ぷらす】を<br>
-              作るお手伝いをしていきます。</p>
-          </div>
+        <div class="cc-plus">
+          <p>あなたが持っている力を引き出し、<br>
+            あなたの人生にとっても、<br>
+            そして社会にとっても【ぷらす】を<br>
+            作るお手伝いをしていきます。</p>
         </div>
-
-        <div class="cc-2nd-outer  div-green">
-
-          <div class="cc-2nd-inner">
-            <img src="<?php echo  get_theme_file_uri();  ?>/assets/images/plus_img01.png" alt="plus_img01">
-            <div class="cc-2nd-text">
-              <p>まずは規則正しい毎日を送ることからスタートしたい。<br>
-                少しずつ、ゆっくり自分のペースで仕事を続けたい。</p>
-
-              <p class="cc-3rd-inner">就職を目指してできることから始めたい。<br>
-                できたら工賃は少しでも多いところで働きたい…。</p>
-            </div>
-          </div>
-
-          <div class="cc-2nd-inner">
-            <img src="<?php echo  get_theme_file_uri();  ?>/assets/images/plus_img02.png" alt="plus_img02">
-            <div class="cc-2nd-text">
-              <p>人それぞれ思いや悩みは違うもの。<br>
-                あなたの希望に合わせて、
-                私たちがしっかりサポートします。</p>
-            </div>
-          </div>
-        </div>
-
       </div>
-      <!--  plus-container  -->
-    </section>
-    <!--  bg-img  -->
+
+      <div class="cc-outer div-green">
+
+        <div class="cc-inner">
+          <img src="<?php echo  get_theme_file_uri();  ?>/assets/images/plus_img01.png" alt="plus_img01">
+          <div class="cc-text">
+            <p>まずは規則正しい毎日を送ることからスタートしたい。<br>
+              少しずつ、ゆっくり自分のペースで仕事を続けたい。</p>
+
+            <p class="cc-2nd-text">就職を目指してできることから始めたい。<br>
+              できたら工賃は少しでも多いところで働きたい…。</p>
+          </div>
+        </div>
+
+        <div class="cc-inner">
+          <img src="<?php echo  get_theme_file_uri();  ?>/assets/images/plus_img02.png" alt="plus_img02">
+          <div class="cc-text">
+            <p>人それぞれ思いや悩みは違うもの。<br>
+              あなたの希望に合わせて、
+              私たちがしっかりサポートします。</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <!--  plus-container  -->
+  </section>
+  <!--  bg-img  -->
 
   </section>
   <!--  plus-top  -->

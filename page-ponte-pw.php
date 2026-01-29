@@ -1,18 +1,19 @@
 <?php get_header();  ?>
 
 <!--  MAIN  -->
-<main id="ponte-pw">
-
-    <section id="bg-container  service">
+<main id="ponte-pw" class="service_page">
 
         <h4 class="service-head">相談支援 ぽんて</h4>
 
+        <div class="bg-img wave-blue"></div>
+
         <section id="pw-top">
 
-            <div class="pw-container">
+
+            <div class="service-container">
 
 
-                <div class="pw-frame">
+                <div class="mv-frame">
                     <img src="<?php echo  get_theme_file_uri();  ?>/assets/images/pw_mv.png" alt="" class="ぷらすmainvisual">
 
                     <div class="cc-pw">
@@ -21,35 +22,35 @@
                     </div>
                 </div>
 
-                <div class="cc-2nd-outer div-blue">
+                <div class="cc-outer div-blue">
 
-                    <div class="cc-2nd-inner">
+                    <div class="cc-inner">
                         <img src="<?php echo  get_theme_file_uri();  ?>/assets/images/pw_img01.png" alt="pw_img01">
-                        <div class="cc-2nd-text">
+                        <div class="cc-text">
                             <p>「できること」や「やってみたいこと」その人が大切にしている想いや暮らしを、一緒に考え、支えていく。<br>
                                 日々の小さな困りごとから、将来への不安まで。</p>
                         </div>
                     </div>
 
-                    <div class="cc-2nd-inner">
+                    <div class="cc-inner">
                         <img src="<?php echo  get_theme_file_uri();  ?>/assets/images/pw_img02.png" alt="pw_img02">
-                        <div class="cc-2nd-text">
+                        <div class="cc-text">
                             <p>福祉サービスを使いたいけど、何から始めたらいいかわからない。<br>
                                 ひとり暮らしや就労のことが心配。<br>
                                 手続きや制度が難しくて不安…なんでもご相談ください。</p>
 
-                            <p class="cc-3rd-inner">専門的なことはもちろん、日々のちょっとした気持ちの変化にも、ていねいに寄り添う支援を心がけています。</p>
+                            <p class="cc-2nd-text">専門的なことはもちろん、日々のちょっとした気持ちの変化にも、ていねいに寄り添う支援を心がけています。</p>
                         </div>
                     </div>
                 </div>
 
             </div>
-            <!--  pw-container  -->
+            <!--  plus-container  -->
         </section>
         <!--  bg-img  -->
 
     </section>
-    <!--  pw-top  -->
+    <!--  plus-top  -->
 
 
 
